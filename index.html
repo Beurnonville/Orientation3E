@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Après la 3ème : Les 3 Voies de Formation en France | Guide Interactif</title>
+  <meta name="description" content="Découvrez les 3 voies de formation après la classe de 3ème en France : Voie Générale et Technologique, Voie Professionnelle sous statut scolaire et Voie de l'Apprentissage. Schéma SVG interactif, comparateur, quiz et simulateur de salaire.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <a href="#schemaSection" class="skip-link">Aller directement au schéma interactif</a>
+
+  <!-- ========================================================================= -->
+  <!-- EN-TÊTE DU SITE                                                           -->
+  <!-- ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">3e</div>
+        <div class="brand-text">
+          <h1>Cap Après la 3<sup>ème</sup></h1>
+          <p>Le guide interactif des voies d'orientation</p>
+        </div>
+      </a>
+
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="#schemaSection" class="nav-link">Schéma interactif</a>
+        <a href="#comparateurSection" class="nav-link">Comparateur des 3 voies</a>
+        <a href="#famillesMetiersSection" class="nav-link">Familles de métiers (Aube)</a>
+        <a href="#quizSection" class="nav-link">Quiz d'orientation</a>
+        <a href="#simulateurSection" class="nav-link">Simulateur apprenti</a>
+        <a href="#faqSection" class="nav-link">FAQ & Idées reçues</a>
+        <a href="#glossaireSection" class="nav-link">Glossaire des sigles</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="tool-btn" id="btnPrint" title="Imprimer la page ou exporter en PDF">
+          <span class="icon">🖨️</span> <span class="hide-mobile">Imprimer</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO BANNER                                                               -->
+  <!-- ========================================================================= -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-badge">
+        <span>✨</span> Guide d'orientation pour les collégiens de 3ème
+      </div>
+      <h2 class="hero-title">
+        Construis ton avenir : <span>choisis ta voie après la 3<sup>ème</sup></span>
+      </h2>
+      <p class="hero-subtitle">
+        En fin de 3<sup>ème</sup>, trois grandes voies s'ouvrent à toi pour préparer ton diplôme et construire ton projet d'avenir. Explore le schéma vectoriel ci-dessous, clique sur chaque étape pour en découvrir les secrets et trouve la formule qui te correspond !
+      </p>
+
+      <!-- Cartouches interactives d'introduction aux 3 voies -->
+      <div class="hero-piliers">
+        <!-- 1. Voie GT -->
+        <div class="pilier-card gt" data-voie="voie-gt" title="Cliquer pour afficher la voie Générale & Technologique sur le schéma">
+          <span class="pilier-badge">Lycée Général & Techno</span>
+          <h3 class="pilier-title">1. Voie Générale &amp; Technologique</h3>
+          <p class="pilier-desc">Statut scolaire. Pour acquérir une solide culture générale ou technologique et préparer des études supérieures (BTS, BUT, Licences, Prépa, Grandes Écoles).</p>
+        </div>
+
+        <!-- 2. Voie Pro Scolaire -->
+        <div class="pilier-card pro" data-voie="voie-pro" title="Cliquer pour afficher la voie Professionnelle scolaire sur le schéma">
+          <span class="pilier-badge">Lycée Professionnel</span>
+          <h3 class="pilier-title">2. Voie Professionnelle scolaire</h3>
+          <p class="pilier-desc">Statut scolaire. Pour apprendre un métier concret en atelier avec des semaines de stages (PFMP) indemnisées, préparant au CAP (2 ans) ou au Bac Pro (3 ans).</p>
+        </div>
+
+        <!-- 3. Voie Apprentissage -->
+        <div class="pilier-card app" data-voie="voie-apprentissage" title="Cliquer pour afficher la voie de l'Apprentissage sur le schéma">
+          <span class="pilier-badge">CFA &amp; Entreprise</span>
+          <h3 class="pilier-title">3. Voie de l'Apprentissage</h3>
+          <p class="pilier-desc">Statut salarié. En alternance entre l'entreprise et le CFA avec un contrat de travail, 5 semaines de congés payés et un vrai salaire mensuel dès 15 ans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION DU SCHÉMA INTERACTIF SVG                                          -->
+  <!-- ========================================================================= -->
+  <section class="diagram-section" id="schemaSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Schéma Dynamique des Parcours</h2>
+        <p class="section-subtitle">Clique sur les filtres pour isoler une voie, ou clique sur une case pour ouvrir sa fiche détaillée.</p>
+      </div>
+
+      <!-- Barre d'outils et de filtres -->
+      <div class="toolbar-wrapper">
+        <div class="filter-group">
+          <span class="filter-label">Afficher :</span>
+          <button type="button" class="filter-btn active" data-filter="all">Toutes les voies</button>
+          <button type="button" class="filter-btn btn-gt" data-filter="voie-gt">
+            <span class="dot" style="color:var(--gt-primary)">●</span> Voie Générale &amp; Techno
+          </button>
+          <button type="button" class="filter-btn btn-pro" data-filter="voie-pro">
+            <span class="dot" style="color:var(--pro-primary)">●</span> Voie Pro (Lycée)
+          </button>
+          <button type="button" class="filter-btn btn-app" data-filter="voie-apprentissage">
+            <span class="dot" style="color:var(--app-primary)">●</span> Apprentissage (CFA)
+          </button>
+          <button type="button" class="filter-btn btn-passerelles" data-filter="passerelles">
+            <span class="dot" style="color:var(--accent-gold)">●</span> Passerelles
+          </button>
+        </div>
+
+        <div class="actions-group">
+          <button type="button" class="tool-btn" id="btnTogglePasserelles" title="Afficher ou masquer les flèches de passerelles">
+            <span class="icon">🔄</span> Afficher les passerelles
+          </button>
+          <button type="button" class="tool-btn" id="btnToggleViewMode" title="Alterner entre le schéma SVG et la liste de cartes smartphone">
+            <span class="icon">📱</span> Vue Cartes smartphone
+          </button>
+          <button type="button" class="tool-btn" id="btnFullscreen" title="Plein écran (idéal pour vidéoprojection en classe / TNI)">
+            <span class="icon">⛶</span> Plein écran
+          </button>
+          <button type="button" class="tool-btn" id="btnDownloadSvg" title="Télécharger le fichier vectoriel SVG">
+            <span class="icon">📥</span> Télécharger SVG
+          </button>
+        </div>
+      </div>
+
+      <!-- Carte du Canvas SVG -->
+      <div class="diagram-canvas-card">
+        <!-- Bouton flottant tactile pour quitter le plein écran -->
+        <button type="button" class="fullscreen-exit-floating-btn" id="btnExitFullscreenFloating" title="Quitter le mode plein écran">
+          ✕ Quitter le plein écran
+        </button>
+
+        <div class="viewport-hint">
+          <span>💡</span> Glisse pour déplacer • Molette ou touches pour zoomer • Clique sur une case pour les détails
+        </div>
+
+        <!-- Contrôles de zoom intégrés -->
+        <div class="zoom-controls">
+          <button type="button" class="zoom-btn" id="btnZoomIn" title="Zoom avant">+</button>
+          <button type="button" class="zoom-btn" id="btnZoomReset" title="Réinitialiser la vue">↺</button>
+          <button type="button" class="zoom-btn" id="btnZoomOut" title="Zoom arrière">−</button>
+        </div>
+
+        <!-- Viewport interactif -->
+        <div class="diagram-viewport" id="diagramViewport">
+          <div class="diagram-svg-container" id="diagramSvgContainer">
+            <!-- Schéma Vectoriel SVG Intégré Inline pour manipulation DOM directe -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-85 0 1285 820" width="100%" height="100%" class="post3eme-svg" id="schemaPost3eme">
+  <defs>
+    <!-- Styles et ombres portées -->
+    <filter id="cardShadow" x="-8%" y="-8%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <filter id="hoverShadow" x="-10%" y="-10%" width="125%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+
+    <!-- Dégradés Voie Générale & Technologique (Bleu Azur) -->
+    <linearGradient id="gradGtHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="gradGtCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="gradGtAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Dégradés Voie Pro Scolaire (Vert Émeraude) -->
+    <linearGradient id="gradProHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="gradProCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="gradProAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Dégradés Voie Apprentissage (Orange Énergie) -->
+    <linearGradient id="gradAppHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="gradAppCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <linearGradient id="gradAppAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- Marqueurs de flèches pour passerelles -->
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowPro" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowApp" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- Arrière-plan général -->
+  <rect x="-85" y="0" width="1285" height="820" fill="#f8fafc" rx="16"/>
+
+  <!-- Lignes repères de niveaux d'années (axe temporel horizontal à gauche décalé pour ne pas chevaucher) -->
+  <g class="time-axis" opacity="0.6">
+    <line x1="-80" y1="120" x2="1175" y2="120" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+    <line x1="-80" y1="210" x2="1175" y2="210" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+    <line x1="-80" y1="340" x2="1175" y2="340" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+    <line x1="-80" y1="460" x2="1175" y2="460" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+    <line x1="-80" y1="580" x2="1175" y2="580" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+
+    <text x="-78" y="115" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="800">POST-BAC</text>
+    <text x="-78" y="205" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="800">DIPLÔMES</text>
+    <text x="-78" y="335" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">TERMINALE</text>
+    <text x="-78" y="455" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1ère ANNÉE</text>
+    <text x="-78" y="575" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2nde / CAP 1</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- COLONNE 1 : VOIE GÉNÉRALE & TECHNOLOGIQUE (X : 40 à 405)                  -->
+  <!-- ========================================================================= -->
+  <g class="voie-group voie-gt" id="svgGroupGt" data-voie="voie-gt">
+    <rect x="40" y="30" width="365" height="690" rx="14" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5" opacity="0.65" class="col-bg"/>
+
+    <!-- 1. Post-Bac GT -->
+    <g class="interactive-node" data-element="post-bac-gt" transform="translate(50, 42)">
+      <rect width="345" height="68" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="345" height="5" rx="2" fill="#0284c7"/>
+      <text x="172" y="24" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="12" font-weight="700">ENSEIGNEMENT SUPÉRIEUR (Bac +2 à Bac +8)</text>
+      <text x="172" y="42" text-anchor="middle" fill="#334155" font-family="system-ui, sans-serif" font-size="11.5">Universités (Licence, Master) • BUT • BTS</text>
+      <text x="172" y="58" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10.5">Classes Préparatoires (CPGE) • Écoles d'ingénieurs / commerce</text>
+    </g>
+
+    <path d="M 135 152 L 135 118" stroke="#0284c7" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M 305 152 L 305 118" stroke="#0284c7" stroke-width="2" stroke-dasharray="3 3"/>
+
+    <!-- 2. Diplômes Visés (Bac Techno & Bac Général) -->
+    <g class="interactive-node" data-element="bac-techno" transform="translate(50, 150)">
+      <rect width="168" height="42" rx="7" fill="#0284c7" filter="url(#cardShadow)"/>
+      <text x="84" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Bac Technologique</text>
+      <text x="84" y="34" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="9.5">STMG, STI2D, ST2S, STL...</text>
+    </g>
+    <g class="interactive-node" data-element="bac-general" transform="translate(227, 150)">
+      <rect width="168" height="42" rx="7" fill="#0369a1" filter="url(#cardShadow)"/>
+      <text x="84" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Bac Général</text>
+      <text x="84" y="34" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="9.5">Spécialités au choix</text>
+    </g>
+
+    <!-- 3. Terminales -->
+    <g class="interactive-node" data-element="premiere-tle-techno" transform="translate(50, 200)">
+      <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0284c7" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Terminale</text>
+      <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">technologique</text>
+      <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
+      <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">Spécialités de série</text>
+    </g>
+    <g class="interactive-node" data-element="premiere-tle-generale" transform="translate(227, 200)">
+      <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0369a1" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Terminale</text>
+      <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">générale</text>
+      <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
+      <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2 enseignements de spé</text>
+    </g>
+
+    <!-- 4. Premières -->
+    <g class="interactive-node" data-element="premiere-tle-techno" transform="translate(50, 310)">
+      <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0284c7" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">technologique</text>
+      <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
+      <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">8 séries possibles</text>
+    </g>
+    <g class="interactive-node" data-element="premiere-tle-generale" transform="translate(227, 310)">
+      <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0369a1" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">générale</text>
+      <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
+      <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">3 enseignements de spé</text>
+    </g>
+
+    <!-- 5. Seconde STHR et 2de GT -->
+    <g class="interactive-node" data-element="seconde-sthr" transform="translate(50, 420)">
+      <rect width="80" height="95" rx="7" fill="#f8fafc" stroke="#0284c7" stroke-width="1.2" stroke-dasharray="3 2"/>
+      <text x="40" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">2nde</text>
+      <text x="40" y="50" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">STHR</text>
+      <text x="40" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="8.5">Hôtellerie</text>
+    </g>
+    <g class="interactive-node" data-element="seconde-gt" transform="translate(138, 420)">
+      <rect width="257" height="95" rx="7" fill="url(#gradGtAccent)" filter="url(#cardShadow)"/>
+      <text x="128" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">2nde Générale &amp; Technologique</text>
+      <text x="128" y="58" text-anchor="middle" fill="#f0f9ff" font-family="system-ui, sans-serif" font-size="11.5">Tronc commun + Options d'exploration</text>
+      <text x="128" y="78" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="10.5">Stage d'observation de 2 semaines en juin</text>
+    </g>
+
+    <path d="M 230 540 L 230 520" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+
+    <!-- 6. Bannière Titre GT -->
+    <g class="col-banner" transform="translate(45, 545)">
+      <rect width="355" height="58" rx="8" fill="url(#gradGtHeader)" filter="url(#cardShadow)"/>
+      <text x="177" y="26" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5">VOIE GÉNÉRALE &amp; TECHNOLOGIQUE</text>
+      <text x="177" y="44" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="11">Sous statut scolaire • Lycée Général et Technologique</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- COLONNE 2 : VOIE PROFESSIONNELLE SCOLAIRE (X : 420 à 785)                 -->
+  <!-- ========================================================================= -->
+  <g class="voie-group voie-pro" id="svgGroupPro" data-voie="voie-pro">
+    <rect x="420" y="30" width="365" height="690" rx="14" fill="#f0fdf4" stroke="#a7f3d0" stroke-width="1.5" opacity="0.65" class="col-bg"/>
+
+    <!-- 1. Post-Bac Pro -->
+    <g class="interactive-node" data-element="post-bac-pro" transform="translate(430, 42)">
+      <rect width="345" height="68" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="345" height="5" rx="2" fill="#059669"/>
+      <text x="172" y="24" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="12" font-weight="700">INSERTION PROFESSIONNELLE &amp; POST-BAC PRO</text>
+      <text x="172" y="42" text-anchor="middle" fill="#334155" font-family="system-ui, sans-serif" font-size="11.5">BTS / BTSA (places réservées) • CS • FCIL</text>
+      <text x="172" y="58" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10.5">Certificat de Spécialisation • Emploi qualifié direct</text>
+    </g>
+
+    <path d="M 505 152 L 505 118" stroke="#059669" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M 685 152 L 685 118" stroke="#059669" stroke-width="2" stroke-dasharray="3 3"/>
+
+    <!-- 2. Diplômes Visés : CAP & Bac Pro -->
+    <g class="interactive-node" data-element="cap-scolaire" transform="translate(430, 150)">
+      <rect width="150" height="42" rx="7" fill="#059669" filter="url(#cardShadow)"/>
+      <text x="75" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">CAP / CAP agricole</text>
+      <text x="75" y="34" text-anchor="middle" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="9.5">Niveau 3 • Métier précis</text>
+    </g>
+    <g class="interactive-node" data-element="bac-pro" transform="translate(590, 150)">
+      <rect width="185" height="42" rx="7" fill="#047857" filter="url(#cardShadow)"/>
+      <text x="92" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Baccalauréat Professionnel</text>
+      <text x="92" y="34" text-anchor="middle" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="9.5">Niveau 4 • Qualification pro</text>
+    </g>
+
+    <!-- 3. Terminale Pro & Poursuite après CAP (Année 3) -->
+    <!-- Poursuite après CAP (CS / BP / 1re Pro) -->
+    <g class="interactive-node" data-element="cap-scolaire" transform="translate(430, 200)">
+      <rect width="150" height="100" rx="7" fill="url(#gradProCard)" stroke="#059669" stroke-width="1.2" stroke-dasharray="4 2" filter="url(#cardShadow)"/>
+      <text x="75" y="28" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Après le CAP</text>
+      <text x="75" y="44" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="10.5">CS • BP • Insertion</text>
+      <line x1="15" y1="55" x2="135" y2="55" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="75" y="73" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">ou Passerelle vers</text>
+      <text x="75" y="88" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1re Bac Pro (P1)</text>
+    </g>
+    <!-- Terminale Pro -->
+    <g class="interactive-node" data-element="premiere-tle-pro" transform="translate(590, 200)">
+      <rect width="185" height="100" rx="7" fill="url(#gradProCard)" stroke="#047857" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="92" y="35" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Terminale</text>
+      <text x="92" y="52" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="12" font-weight="600">professionnelle</text>
+      <line x1="20" y1="65" x2="165" y2="65" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="92" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Prépa études OU insertion</text>
+    </g>
+
+    <!-- 4. 2e année CAP & 1re Pro (Année 2) -->
+    <!-- 2e année CAP -->
+    <g class="interactive-node" data-element="cap-scolaire" id="nodeCapAnnee2" transform="translate(430, 310)">
+      <rect width="150" height="100" rx="7" fill="url(#gradProCard)" stroke="#059669" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="75" y="32" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">2e année</text>
+      <text x="75" y="49" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="12" font-weight="600">de CAP</text>
+      <line x1="15" y1="62" x2="135" y2="62" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="75" y="78" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Épreuves &amp; Diplôme</text>
+      <text x="75" y="92" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="9" font-weight="600">6-7 sem. PFMP</text>
+    </g>
+    <!-- 1re Pro -->
+    <g class="interactive-node" data-element="premiere-tle-pro" id="nodePremierePro" transform="translate(590, 310)">
+      <rect width="185" height="100" rx="7" fill="url(#gradProCard)" stroke="#047857" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="92" y="35" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="92" y="52" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="12" font-weight="600">professionnelle</text>
+      <line x1="20" y1="65" x2="165" y2="65" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="92" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Spécialité &amp; Chef-d'œuvre</text>
+    </g>
+
+    <!-- 5. 1re année CAP & 2de Pro (Année 1 après 3e) -->
+    <!-- 1re année CAP -->
+    <g class="interactive-node" data-element="cap-scolaire" transform="translate(430, 420)">
+      <rect width="150" height="95" rx="7" fill="#f0fdf4" stroke="#059669" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="75" y="30" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1ère année</text>
+      <text x="75" y="47" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">de CAP</text>
+      <line x1="15" y1="58" x2="135" y2="58" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="75" y="73" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Ateliers pratiques</text>
+      <text x="75" y="87" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="9">6 sem. de stage</text>
+    </g>
+    <!-- 2de Pro -->
+    <g class="interactive-node" data-element="seconde-pro" transform="translate(590, 420)">
+      <rect width="185" height="95" rx="7" fill="url(#gradProAccent)" filter="url(#cardShadow)"/>
+      <text x="92" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14.5" font-weight="700">2nde Professionnelle</text>
+      <text x="92" y="54" text-anchor="middle" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="11">Par famille de métiers</text>
+      <text x="92" y="74" text-anchor="middle" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10.5">6 semaines de stage (PFMP)</text>
+    </g>
+
+    <!-- 6. Bannière Titre Pro -->
+    <g class="col-banner" transform="translate(425, 545)">
+      <rect width="355" height="58" rx="8" fill="url(#gradProHeader)" filter="url(#cardShadow)"/>
+      <text x="177" y="26" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5">VOIE PROFESSIONNELLE</text>
+      <text x="177" y="44" text-anchor="middle" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="11">Sous statut scolaire • Lycée Professionnel</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- COLONNE 3 : VOIE DE L'APPRENTISSAGE (X : 800 à 1165)                      -->
+  <!-- ========================================================================= -->
+  <g class="voie-group voie-apprentissage" id="svgGroupApp" data-voie="voie-apprentissage">
+    <rect x="800" y="30" width="365" height="690" rx="14" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5" opacity="0.65" class="col-bg"/>
+
+    <!-- 1. Post-Apprentissage -->
+    <g class="interactive-node" data-element="post-apprentissage" transform="translate(810, 42)">
+      <rect width="345" height="68" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <rect width="345" height="5" rx="2" fill="#ea580c"/>
+      <text x="172" y="24" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">INSERTION PROFESSIONNELLE &amp; ALTERNANCE POST-BAC</text>
+      <text x="172" y="42" text-anchor="middle" fill="#334155" font-family="system-ui, sans-serif" font-size="11.5">Plus de 70% d'emploi direct dans les 6 mois !</text>
+      <text x="172" y="58" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10.5">BTS • BP • Licence Pro • Écoles d'ingénieurs</text>
+    </g>
+
+    <path d="M 885 152 L 885 118" stroke="#ea580c" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M 1065 152 L 1065 118" stroke="#ea580c" stroke-width="2" stroke-dasharray="3 3"/>
+
+    <!-- 2. Diplômes Visés CFA -->
+    <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 150)">
+      <rect width="150" height="42" rx="7" fill="#ea580c" filter="url(#cardShadow)"/>
+      <text x="75" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">CAP en Apprentissage</text>
+      <text x="75" y="34" text-anchor="middle" fill="#ffedd5" font-family="system-ui, sans-serif" font-size="9.5">Même diplôme d'État</text>
+    </g>
+    <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 150)">
+      <rect width="185" height="42" rx="7" fill="#c2410c" filter="url(#cardShadow)"/>
+      <text x="92" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Bac Pro en Apprentissage</text>
+      <text x="92" y="34" text-anchor="middle" fill="#ffedd5" font-family="system-ui, sans-serif" font-size="9.5">Même diplôme d'État</text>
+    </g>
+
+    <!-- 3. Terminale Pro CFA & Poursuite après CAP CFA (Année 3) -->
+    <!-- Poursuite après CAP CFA -->
+    <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 200)">
+      <rect width="150" height="100" rx="7" fill="url(#gradAppCard)" stroke="#ea580c" stroke-width="1.2" stroke-dasharray="4 2" filter="url(#cardShadow)"/>
+      <text x="75" y="28" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Après le CAP CFA</text>
+      <text x="75" y="44" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="10.5">BP • CDI direct</text>
+      <line x1="15" y1="55" x2="135" y2="55" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="73" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">ou poursuite en</text>
+      <text x="75" y="88" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Bac Pro alternance</text>
+    </g>
+    <!-- Terminale Pro CFA -->
+    <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 200)">
+      <rect width="185" height="100" rx="7" fill="url(#gradAppCard)" stroke="#c2410c" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="92" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">Terminale Pro</text>
+      <text x="92" y="47" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">en Alternance</text>
+      <line x1="20" y1="60" x2="165" y2="60" stroke="#fed7aa" stroke-width="1"/>
+      <text x="92" y="75" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Alternance CFA / Boîte</text>
+      <text x="92" y="90" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">Salaire : 53% SMIC</text>
+    </g>
+
+    <!-- 4. 2e année CAP CFA & 1re Pro CFA (Année 2) -->
+    <!-- 2e année CAP CFA -->
+    <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 310)">
+      <rect width="150" height="100" rx="7" fill="url(#gradAppCard)" stroke="#ea580c" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="75" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">2e année CAP</text>
+      <text x="75" y="47" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">en Alternance</text>
+      <line x1="15" y1="60" x2="135" y2="60" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="75" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Entreprise (70%)</text>
+      <text x="75" y="90" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">Salaire : 39% SMIC</text>
+    </g>
+    <!-- 1re Pro CFA -->
+    <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 310)">
+      <rect width="185" height="100" rx="7" fill="url(#gradAppCard)" stroke="#c2410c" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="92" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1ère Pro</text>
+      <text x="92" y="47" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">en Alternance</text>
+      <line x1="20" y1="60" x2="165" y2="60" stroke="#fed7aa" stroke-width="1"/>
+      <text x="92" y="75" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">CFA + Entreprise</text>
+      <text x="92" y="90" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">Salaire : 39% SMIC</text>
+    </g>
+
+    <!-- 5. 1re année CAP CFA & 2de Pro CFA (Année 1 après 3e) -->
+    <!-- 1re année CAP CFA -->
+    <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 420)">
+      <rect width="150" height="95" rx="7" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="75" y="28" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1ère année CAP</text>
+      <text x="75" y="45" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="10.5">en Alternance</text>
+      <line x1="15" y1="56" x2="135" y2="56" stroke="#fed7aa" stroke-width="1"/>
+      <text x="75" y="71" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Dès 15 ans révolus</text>
+      <text x="75" y="86" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Salaire : 27% SMIC</text>
+    </g>
+    <!-- 2de Pro CFA -->
+    <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 420)">
+      <rect width="185" height="95" rx="7" fill="url(#gradAppAccent)" filter="url(#cardShadow)"/>
+      <text x="92" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700">2nde Pro Apprentissage</text>
+      <text x="92" y="50" text-anchor="middle" fill="#fff7ed" font-family="system-ui, sans-serif" font-size="11">Contrat de travail de 3 ans</text>
+      <text x="92" y="70" text-anchor="middle" fill="#ffedd5" font-family="system-ui, sans-serif" font-size="10">Alternance CFA &amp; Entreprise</text>
+      <text x="92" y="85" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Salaire mensuel dès le 1er mois</text>
+    </g>
+
+    <!-- 6. Bannière Titre Apprentissage -->
+    <g class="col-banner" transform="translate(805, 545)">
+      <rect width="355" height="58" rx="8" fill="url(#gradAppHeader)" filter="url(#cardShadow)"/>
+      <text x="177" y="26" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5">VOIE DE L'APPRENTISSAGE</text>
+      <text x="177" y="44" text-anchor="middle" fill="#ffedd5" font-family="system-ui, sans-serif" font-size="11">Sous statut salarié • En CFA &amp; Entreprise</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- BANNIÈRE FONDATRICE DU BAS : APRÈS LA CLASSE DE 3ème                      -->
+  <!-- ========================================================================= -->
+  <g class="socle-3eme" transform="translate(45, 620)">
+    <rect width="1110" height="60" rx="10" fill="#334155" filter="url(#cardShadow)"/>
+    <text x="555" y="37" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="19" font-weight="800" letter-spacing="1">APRÈS LA CLASSE DE 3ème</text>
+    
+    <circle cx="225" cy="0" r="14" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 225 6 L 225 -6 M 220 -1 L 225 -6 L 230 -1" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <circle cx="602" cy="0" r="14" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 602 6 L 602 -6 M 597 -1 L 602 -6 L 607 -1" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <circle cx="982" cy="0" r="14" fill="#ea580c" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 982 6 L 982 -6 M 977 -1 L 982 -6 L 987 -1" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- PASSERELLES INTERACTIVES (Flèches et ponts entre les voies)                -->
+  <!-- ========================================================================= -->
+  <g class="passerelles-layer" id="svgPasserelles">
+    <!-- P1 : Passerelle naturelle 2e année CAP ➔ 1re Bac Pro (Jolie arche fluide et lisible) -->
+    <g class="passerelle-item" id="p-cap-bacpro" data-passerelle="passerelle-cap-bacpro">
+      <path d="M 545 310 C 545 260, 635 260, 635 305" fill="none" stroke="#f59e0b" stroke-width="3.5" marker-end="url(#arrowGold)" class="bridge-path"/>
+      <circle cx="590" cy="265" r="13" fill="#f59e0b" filter="url(#cardShadow)"/>
+      <text x="590" y="269" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="900">P1</text>
+    </g>
+
+    <!-- P2 : Passerelle 2de Pro ➔ 1re Technologique -->
+    <g class="passerelle-item" id="p-pro-techno" data-passerelle="passerelle-seconde-pro-techno">
+      <path d="M 590 460 C 400 460, 300 370, 218 370" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrowGold)" class="bridge-path"/>
+      <circle cx="410" cy="415" r="12" fill="#f59e0b" filter="url(#cardShadow)"/>
+      <text x="410" y="419" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="900">P2</text>
+    </g>
+
+    <!-- P3 : Passerelle 2de GT ➔ 1re Pro ou réorientation -->
+    <g class="passerelle-item" id="p-gt-pro" data-passerelle="passerelle-seconde-gt-pro">
+      <path d="M 395 470 C 490 470, 510 380, 590 380" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="5 3" marker-end="url(#arrowPro)" class="bridge-path"/>
+      <circle cx="490" cy="425" r="11" fill="#0284c7" filter="url(#cardShadow)"/>
+      <text x="490" y="429" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="900">P3</text>
+    </g>
+
+    <!-- P4 : Passerelle Scolaire ➔ Apprentissage -->
+    <g class="passerelle-item" id="p-scolaire-app" data-passerelle="passerelle-scolaire-apprentissage">
+      <path d="M 775 465 C 820 465, 890 465, 970 465" fill="none" stroke="#ea580c" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrowApp)" class="bridge-path"/>
+      <circle cx="875" cy="465" r="12" fill="#ea580c" filter="url(#cardShadow)"/>
+      <text x="875" y="469" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="900">P4</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LÉGENDE PÉDAGOGIQUE EN BAS                                               -->
+  <!-- ========================================================================= -->
+  <g class="legend-bar" id="svgLegendBar" transform="translate(45, 695)">
+    <text x="10" y="25" fill="#334155" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Passerelles d'orientation :</text>
+    <rect x="180" y="14" width="22" height="15" rx="3" fill="#f59e0b"/>
+    <text x="191" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P1</text>
+    <text x="208" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">CAP ➔ 1re Bac Pro</text>
+
+    <rect x="340" y="14" width="22" height="15" rx="3" fill="#f59e0b"/>
+    <text x="351" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P2</text>
+    <text x="368" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2de Pro ➔ 1re Techno</text>
+
+    <rect x="510" y="14" width="22" height="15" rx="3" fill="#0284c7"/>
+    <text x="521" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P3</text>
+    <text x="538" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2de GT ➔ 1re Pro</text>
+
+    <rect x="670" y="14" width="22" height="15" rx="3" fill="#ea580c"/>
+    <text x="681" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P4</text>
+    <text x="698" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">Lycée Pro ➔ Apprentissage CFA</text>
+
+    <text x="1100" y="25" text-anchor="end" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="500">Cliquez sur une case pour afficher les détails</text>
+  </g>
+</svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode alternatif : Cartes smartphones pour petits écrans -->
+      <div class="mobile-cards-view" id="mobileCardsView">
+        <div class="mobile-tabs">
+          <button type="button" class="mobile-tab-btn active gt" data-tab-voie="voie-gt">Voie Générale &amp; Techno</button>
+          <button type="button" class="mobile-tab-btn pro" data-tab-voie="voie-pro">Voie Pro (Lycée)</button>
+          <button type="button" class="mobile-tab-btn app" data-tab-voie="voie-apprentissage">Apprentissage (CFA)</button>
+        </div>
+        <div id="mobileTimelineContainer">
+          <!-- Rempli dynamiquement par JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE 1 : COMPARATEUR DIRECT DES 3 STATUTS                               -->
+  <!-- ========================================================================= -->
+  <section class="comparator-section" id="comparateurSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tableau Comparatif des 3 Voies</h2>
+        <p class="section-subtitle">Retrouve en un coup d'œil les différences concrètes de statut, de rythme, de salaire et de débouchés.</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Critères clés</th>
+              <th class="col-gt">Voie Générale &amp; Technologique</th>
+              <th class="col-pro">Voie Pro sous statut scolaire</th>
+              <th class="col-app">Voie de l'Apprentissage</th>
+            </tr>
+          </thead>
+          <tbody id="comparatorTableBody">
+            <!-- Rempli dynamiquement par app.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE : 2NDE PRO - FAMILLES DE MÉTIERS & LYCÉES DE L'AUBE (10)           -->
+  <!-- ========================================================================= -->
+  <section class="familles-section" id="famillesMetiersSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">2nde Pro : Principales Familles de Métiers</h2>
+        <p class="section-subtitle">
+          En classe de 2de professionnelle, les formations sont regroupées par grandes familles. Découvrez les métiers, les spécialités de Bac Pro associées et les <strong>lycées professionnels de l'Aube (10)</strong> qui les proposent.
+        </p>
+      </div>
+
+      <div class="familles-toolbar">
+        <div class="familles-search-box">
+          <span class="search-icon-badge">🔍</span>
+          <input type="text" id="famillesSearchInput" class="familles-search-input" placeholder="Rechercher par métier, bac pro ou lycée (ex: Troyes, Romilly, électricité, vente, cuisine...)" aria-label="Rechercher une famille de métiers ou un lycée">
+        </div>
+
+        <div class="familles-category-filters">
+          <button type="button" class="familles-filter-btn active" data-category="all">Toutes les familles</button>
+          <button type="button" class="familles-filter-btn" data-category="tertiaire">Commerce &amp; Gestion</button>
+          <button type="button" class="familles-filter-btn" data-category="industrie">Industrie, Énergie &amp; Véhicules</button>
+          <button type="button" class="familles-filter-btn" data-category="batiment">Bâtiment &amp; Bois</button>
+          <button type="button" class="familles-filter-btn" data-category="services-sante">Hôtellerie, Mode &amp; Santé</button>
+          <button type="button" class="familles-filter-btn" data-category="agricole">Viticulture &amp; Agriculture</button>
+        </div>
+      </div>
+
+      <div class="familles-grid" id="famillesGrid">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE 2 : MINI-QUIZ D'ORIENTATION INTERACTIF                             -->
+  <!-- ========================================================================= -->
+  <section class="quiz-section" id="quizSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Mini-Quiz d'Orientation</h2>
+        <p class="section-subtitle">5 questions simples pour t'aider à identifier la voie qui te correspond le plus.</p>
+      </div>
+
+      <div class="quiz-card">
+        <!-- État question active -->
+        <div id="quizActiveBox">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+          <div class="quiz-question-number" id="quizQuestionNum">Question 1 sur 5</div>
+          <h3 class="quiz-question-text" id="quizQuestionText">Chargement de la question...</h3>
+          <div class="quiz-options" id="quizOptionsContainer">
+            <!-- Rempli par app.js -->
+          </div>
+        </div>
+
+        <!-- État résultat final -->
+        <div class="quiz-result-box" id="quizResultBox">
+          <span class="result-badge" id="resultBadge">Profil déterminé</span>
+          <h3 class="result-title" id="resultTitle">Ton résultat</h3>
+          <p class="result-desc" id="resultDesc">Description du profil...</p>
+
+          <div class="result-scores">
+            <div class="score-card gt">
+              <div class="score-val" id="scoreValGt">0%</div>
+              <div class="score-name">Voie Générale &amp; Techno</div>
+            </div>
+            <div class="score-card pro">
+              <div class="score-val" id="scoreValPro">0%</div>
+              <div class="score-name">Voie Professionnelle Lycée</div>
+            </div>
+            <div class="score-card app">
+              <div class="score-val" id="scoreValApp">0%</div>
+              <div class="score-name">Voie Apprentissage (CFA)</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" id="btnExploreRecommended">Explorer cette voie sur le schéma</button>
+            <button type="button" class="btn-secondary" id="btnRestartQuiz">Recommencer le quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE 3 : SIMULATEUR DE SALAIRE EN APPRENTISSAGE                         -->
+  <!-- ========================================================================= -->
+  <section class="simulator-section" id="simulateurSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Simulateur de Rémunération en Apprentissage</h2>
+        <p class="section-subtitle">Estime ton salaire net mensuel officiel selon ton âge et l'année de ton contrat de travail.</p>
+      </div>
+
+      <div class="simulator-card">
+        <div class="sim-controls">
+          <div class="form-group">
+            <label>Ton âge au début de la formation :</label>
+            <div class="segmented-control">
+              <button type="button" class="segmented-btn sim-age-btn active" data-age="15-17">15 à 17 ans (Mineur)</button>
+              <button type="button" class="segmented-btn sim-age-btn" data-age="18-20">18 à 20 ans</button>
+              <button type="button" class="segmented-btn sim-age-btn" data-age="21-25">21 ans et +</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Année du contrat d'apprentissage :</label>
+            <div class="segmented-control">
+              <button type="button" class="segmented-btn sim-year-btn active" data-year="annee1">1ère année (CAP ou Bac Pro)</button>
+              <button type="button" class="segmented-btn sim-year-btn" data-year="annee2">2ème année</button>
+              <button type="button" class="segmented-btn sim-year-btn" data-year="annee3">3ème année (Bac Pro)</button>
+            </div>
+          </div>
+
+          <div class="sim-perks">
+            <strong>Avantages du contrat d'apprentissage :</strong>
+            <ul>
+              <li>Formation 100% gratuite (prise en charge par les branches professionnelles).</li>
+              <li>Salaire 100% exonéré d'impôt sur le revenu (dans la limite du SMIC annuel).</li>
+              <li>5 semaines de congés payés par an et affiliation à la Sécurité Sociale dès le 1er jour.</li>
+              <li>Prime d'aide au permis de conduire (500 € pour les apprentis dès 18 ans).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sim-display">
+          <span class="sim-badge" id="simBadge">Salaire Net Mensuel Estimé</span>
+          <div class="sim-salary-amount" id="simSalaryAmount">486 €</div>
+          <div class="sim-salary-sub" id="simSalarySub">soit 27% du SMIC mensuel brut</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">
+            * Base légale officielle indicative (SMIC brut en vigueur). Les conventions collectives de certaines entreprises (BTP, métallurgie, etc.) peuvent prévoir des pourcentages encore plus élevés.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE 4 : FOIRE AUX QUESTIONS & IDÉES REÇUES                             -->
+  <!-- ========================================================================= -->
+  <section class="faq-section" id="faqSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Idées Reçues &amp; Foire aux Questions</h2>
+        <p class="section-subtitle">Démystifions les clichés sur les voies d'orientation après la classe de 3ème.</p>
+      </div>
+
+      <div class="faq-grid" id="faqContainer">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE 5 : GLOSSAIRE INTERACTIF DES SIGLES                                -->
+  <!-- ========================================================================= -->
+  <section class="glossary-section" id="glossaireSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Glossaire des Sigles de l'Orientation</h2>
+        <p class="section-subtitle">CAP, PFMP, CFA, BTS, BUT, STMG... Décrypte le vocabulaire de l'orientation en quelques clics.</p>
+      </div>
+
+      <div class="glossary-search-box">
+        <span class="search-icon-badge">🔍</span>
+        <input type="text" id="glossarySearchInput" class="glossary-input" placeholder="Rechercher un sigle ou un mot (ex: CAP, stage, technologique...)" aria-label="Rechercher dans le glossaire">
+      </div>
+
+      <div class="glossary-grid" id="glossaryGrid">
+        <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TIROIR LATÉRAL COULISSANT (OFF-CANVAS DRAWER)                              -->
+  <!-- ========================================================================= -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="detail-drawer" id="detailDrawer" aria-label="Fiche détaillée de la formation" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <span class="drawer-badge" id="drawerBadge">Information</span>
+        <h3 class="drawer-title" id="drawerTitle">Titre de la formation</h3>
+        <p class="drawer-subtitle" id="drawerSubtitle">Sous-titre explicatif</p>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" title="Fermer la fiche">✕</button>
+    </div>
+
+    <div class="drawer-body" id="drawerBody">
+      <!-- Rempli dynamiquement par app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn-primary" onclick="window.app.closeDrawer()">Fermer cette fiche</button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- PIED DE PAGE                                                              -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h3>Cap Après la 3<sup>ème</sup></h3>
+        <p>Un outil pédagogique interactif conçu pour accompagner les élèves de 3ème, leurs familles et les équipes éducatives dans le choix de leur voie d'orientation post-collège.</p>
+        <p style="margin-top: 0.8rem; font-size: 0.825rem; color: #64748b;">
+          Conforme aux référentiels et maquettes pédagogiques de l'Éducation Nationale et de l'ONISEP.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Sites Officiels</h4>
+        <ul>
+          <li><a href="https://www.onisep.fr" target="_blank" rel="noopener">ONISEP</a></li>
+          <li><a href="https://www.education.gouv.fr" target="_blank" rel="noopener">Ministère de l'Éducation Nationale</a></li>
+          <li><a href="https://www.1jeune1solution.gouv.fr" target="_blank" rel="noopener">1 jeune, 1 solution</a></li>
+          <li><a href="https://www.parcoursup.gouv.fr" target="_blank" rel="noopener">Parcoursup</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="assets/schema-post3eme.svg" download="schema-orientation-apres-la-3eme.svg">Télécharger le schéma SVG</a></li>
+          <li><a href="#comparateurSection">Tableau comparatif</a></li>
+          <li><a href="#famillesMetiersSection">Familles de métiers (Aube)</a></li>
+          <li><a href="#quizSection">Quiz d'orientation</a></li>
+          <li><a href="#simulateurSection">Simulateur de salaire</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      
+      <div>Accompagnement personnalisé : Professeurs Principaux &amp; Psy-EN en collège.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts d'application -->
+  <script src="data/orientation-data.js"></script>
+  <script src="scripts/diagram.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
