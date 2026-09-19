@@ -6,6 +6,7 @@
   <title>Après la 3ème : Les 3 Voies de Formation en France | Guide Interactif</title>
   <meta name="description" content="Découvrez les 3 voies de formation après la classe de 3ème en France : Voie Générale et Technologique, Voie Professionnelle sous statut scolaire et Voie de l'Apprentissage. Schéma SVG interactif, comparateur, quiz et simulateur de salaire.">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
@@ -27,10 +28,11 @@
       <nav class="header-nav" aria-label="Navigation principale">
         <a href="#schemaSection" class="nav-link">Schéma interactif</a>
         <a href="#comparateurSection" class="nav-link">Comparateur des 3 voies</a>
-        <a href="#famillesMetiersSection" class="nav-link">Familles de métiers (Aube)</a>
+        <a href="#famillesMetiersSection" class="nav-link">Familles de métiers</a>
+        <a href="#carteSection" class="nav-link">Carte des lycées (Aube)</a>
         <a href="#quizSection" class="nav-link">Quiz d'orientation</a>
         <a href="#simulateurSection" class="nav-link">Simulateur apprenti</a>
-        <a href="#faqSection" class="nav-link">FAQ & Idées reçues</a>
+        <a href="#faqSection" class="nav-link">FAQ &amp; Idées reçues</a>
         <a href="#glossaireSection" class="nav-link">Glossaire des sigles</a>
       </nav>
 
@@ -635,9 +637,9 @@
   <section class="familles-section" id="famillesMetiersSection">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">2nde Pro : Principales Familles de Métiers</h2>
+        <h2 class="section-title">2nde Pro : Familles de Métiers &amp; Lycées de l'Aube (10)</h2>
         <p class="section-subtitle">
-          En classe de 2de professionnelle, les formations sont regroupées par grandes familles. Découvrez les métiers, les spécialités de Bac Pro associées et les <strong>lycées professionnels de l'Aube (10)</strong> qui les proposent.
+          Découvrez toutes les formations de Bac Professionnel proposées dans les <strong>établissements de l'Aube</strong>, leurs <strong>capacités d'accueil</strong> et l'historique officiel des <strong>demandes en Vœu 1 (2025, 2024, 2023)</strong> issu du CIO de Troyes.
         </p>
       </div>
 
@@ -659,6 +661,81 @@
 
       <div class="familles-grid" id="famillesGrid">
         <!-- Rempli dynamiquement par app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MODULE : CARTE INTERACTIVE (BAC PROS ET CAP)                              -->
+  <!-- ========================================================================= -->
+  <section class="map-section" id="carteSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🗺️ Géolocalisation &amp; Établissements</div>
+        <h2 class="section-title">Carte interactive (Bac Pros et CAP)</h2>
+        <p class="section-subtitle">
+          Explorez la localisation géographique des 14 établissements proposant une formation de type Bac Pro ou CAP dans l'Aube. Sélectionnez un onglet pour basculer entre la ville de <strong>Troyes</strong> et le reste du <strong>département de l'Aube</strong>. Cliquez ou survolez un établissement pour afficher sa fiche détaillée complète (capacités et demandes).
+        </p>
+      </div>
+
+      <!-- Contrôles et Onglets principaux : Troyes et Aube -->
+      <div class="map-header-controls">
+        <div class="map-tabs" role="tablist" aria-label="Choix de la carte">
+          <button type="button" class="map-tab-btn active" id="tabMapTroyes" data-map="troyes" role="tab" aria-selected="true">
+            <span class="tab-icon">🏙️</span>
+            <span class="tab-label">Troyes</span>
+            <span class="tab-count-badge">7 lycées</span>
+          </button>
+          <button type="button" class="map-tab-btn" id="tabMapAube" data-map="aube" role="tab" aria-selected="false">
+            <span class="tab-icon">🗺️</span>
+            <span class="tab-label">Aube</span>
+            <span class="tab-count-badge">7 lycées</span>
+          </button>
+        </div>
+
+        <div class="map-filter-tags">
+          <span class="map-filter-label">Filtrer par statut :</span>
+          <button type="button" class="map-tag-btn active" data-filter-status="all">Tous les établissements</button>
+          <button type="button" class="map-tag-btn" data-filter-status="public">Publics</button>
+          <button type="button" class="map-tag-btn" data-filter-status="prive">Privés sous contrat</button>
+        </div>
+      </div>
+
+      <!-- Carte en pleine largeur et panneau latéral interactif -->
+      <div class="map-interactive-wrapper">
+        <div class="map-viewport-container">
+          <div id="interactiveMap" class="interactive-map"></div>
+
+          <!-- Légende flottante sur la carte -->
+          <div class="map-floating-legend">
+            <div class="legend-item"><span class="pin-dot public"></span> Lycée Public</div>
+            <div class="legend-item"><span class="pin-dot prive"></span> Lycée Privé sous contrat</div>
+          </div>
+        </div>
+
+        <!-- Fiche détaillée interactive de l'établissement -->
+        <aside class="map-school-sheet" id="mapSchoolSheet" aria-label="Fiche de l'établissement sélectionné">
+          <div class="sheet-placeholder" id="sheetPlaceholder">
+            <div class="placeholder-icon">📍</div>
+            <h3>Sélectionnez un établissement</h3>
+            <p>Cliquez ou survolez un marqueur sur la carte ou dans la liste ci-dessous pour découvrir toutes ses formations en Bac Pro et CAP avec leurs capacités d'accueil (en gras) et le nombre de demandes (en bleu).</p>
+          </div>
+
+          <div class="sheet-content" id="sheetContent" style="display:none;">
+            <!-- Rempli dynamiquement par map.js -->
+          </div>
+        </aside>
+      </div>
+
+      <!-- Liste rapide de tous les lycées de la zone active -->
+      <div class="map-school-quicklist">
+        <div class="quicklist-header">
+          <h4 id="quicklistTitle">Lycées affichés sur la carte :</h4>
+          <span class="quicklist-hint">Cliquez sur un lycée pour le localiser immédiatement sur la carte</span>
+        </div>
+        <div class="quicklist-grid" id="mapQuicklistGrid">
+          <!-- Rempli dynamiquement par map.js -->
+        </div>
       </div>
     </div>
   </section>
@@ -857,7 +934,8 @@
         <ul>
           <li><a href="assets/schema-post3eme.svg" download="schema-orientation-apres-la-3eme.svg">Télécharger le schéma SVG</a></li>
           <li><a href="#comparateurSection">Tableau comparatif</a></li>
-          <li><a href="#famillesMetiersSection">Familles de métiers (Aube)</a></li>
+          <li><a href="#famillesMetiersSection">Familles de métiers</a></li>
+          <li><a href="#carteSection">Carte interactive (Troyes &amp; Aube)</a></li>
           <li><a href="#quizSection">Quiz d'orientation</a></li>
           <li><a href="#simulateurSection">Simulateur de salaire</a></li>
         </ul>
@@ -870,9 +948,12 @@
     </div>
   </footer>
 
-  <!-- Scripts d'application -->
+  <!-- Scripts d'application et données -->
+  <script src="assets/vendor/leaflet/leaflet.js"></script>
+  <script src="data/formations-aube.js"></script>
   <script src="data/orientation-data.js"></script>
   <script src="scripts/diagram.js"></script>
+  <script src="scripts/map.js"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>

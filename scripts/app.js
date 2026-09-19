@@ -718,18 +718,38 @@ class AppController {
         <div class="famille-sub-section">
           <div class="famille-sub-title">🏫 Où se former dans l'Aube (10) :</div>
           <div class="lycees-aube-list">
-            ${famille.lyceesAube.map(l => `
-              <div class="lycee-aube-item">
-                <div class="lycee-aube-top">
-                  <span class="lycee-aube-name">${l.nom}</span>
-                  <div class="lycee-aube-badges">
-                    <span class="badge-statut ${l.statut.toLowerCase().includes('public') ? 'public' : 'prive'}">${l.statut}</span>
-                    <span class="badge-commune">📍 ${l.commune}</span>
+            ${famille.lyceesAube.map(l => {
+              const dem = l.demandes;
+              let demStr = '';
+              if (dem) {
+                if (dem['2023'] !== null && dem['2023'] !== undefined) {
+                  demStr = `2025 : <strong class="stat-blue">${dem['2025']}</strong> &bull; 2024 : ${dem['2024']} &bull; 2023 : ${dem['2023']}`;
+                } else if (dem['2024'] !== null && dem['2024'] !== undefined) {
+                  demStr = `2025 : <strong class="stat-blue">${dem['2025']}</strong> &bull; 2024 : ${dem['2024']}`;
+                } else if (dem['2025'] !== null && dem['2025'] !== undefined) {
+                  demStr = `2025 : <strong class="stat-blue">${dem['2025']}</strong>`;
+                }
+              }
+
+              return `
+                <div class="lycee-aube-item">
+                  <div class="lycee-aube-top">
+                    <span class="lycee-aube-name">${l.nom}</span>
+                    <div class="lycee-aube-badges">
+                      <span class="badge-statut ${l.statut.toLowerCase().includes('public') ? 'public' : 'prive'}">${l.statut}</span>
+                      <span class="badge-commune">📍 ${l.commune}</span>
+                    </div>
                   </div>
+                  <div class="lycee-aube-details">${l.details}</div>
+                  ${l.capacite ? `
+                    <div class="lycee-aube-stats">
+                      <span class="stat-cap">Capacité d'accueil : <strong>${l.capacite} places</strong></span>
+                      ${demStr ? `<span class="stat-dem">Demandes Vœu 1 : ${demStr}</span>` : ''}
+                    </div>
+                  ` : ''}
                 </div>
-                <div class="lycee-aube-details">${l.details}</div>
-              </div>
-            `).join("")}
+              `;
+            }).join("")}
           </div>
         </div>
       </div>

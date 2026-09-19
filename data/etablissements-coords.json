@@ -1,0 +1,72 @@
+{
+  "lpo-les-lombards-troyes": {
+    "lat": 48.2776023,
+    "lon": 4.0683052,
+    "addr": "14 Avenue des Lombards, 10000 Troyes, France"
+  },
+  "lp-gabriel-voisin-troyes": {
+    "lat": 48.271934,
+    "lon": 4.0757733,
+    "addr": "1 Rue Marie Curie, 10000 Troyes, France"
+  },
+  "lpo-marie-de-champagne-troyes": {
+    "lat": 48.2720813,
+    "lon": 4.0581279,
+    "addr": "30 Rue de la Reine Blanche, 10000 Troyes, France"
+  },
+  "lp-la-salle-troyes": {
+    "lat": 48.2947204,
+    "lon": 4.072789,
+    "addr": "11 Rue de la Trinité, 10000 Troyes, France"
+  },
+  "lp-jeanne-mance-troyes": {
+    "lat": 48.2971626,
+    "lon": 4.0746257,
+    "addr": "42 Rue Jeanne Mance, 10000 Troyes, France"
+  },
+  "lp-leonie-aviat-troyes": {
+    "lat": 48.2915653,
+    "lon": 4.0778708,
+    "addr": "11 Rue des Terrasses, 10000 Troyes, France"
+  },
+  "lpo-edouard-herriot-sainte-savine": {
+    "lat": 48.2939552,
+    "lon": 4.0561847,
+    "addr": "31 Rue Edouard Herriot, 10300 Sainte-Savine, France"
+  },
+  "lp-denis-diderot-romilly": {
+    "lat": 48.5197475,
+    "lon": 3.7263678,
+    "addr": "64 Rue Paul Cézanne, 10100 Romilly-sur-Seine, France"
+  },
+  "lp-val-more-bar-sur-seine": {
+    "lat": 48.1126529,
+    "lon": 4.3759103,
+    "addr": "Rue du Val Moré, 10110 Bar-sur-Seine, France"
+  },
+  "lpo-gaston-bachelard-bar-sur-aube": {
+    "lat": 48.2286764,
+    "lon": 4.7057924,
+    "addr": "3 Rue Gaston Bachelard, 10200 Bar-sur-Aube, France"
+  },
+  "lycee-forestier-crogny-chaource": {
+    "lat": 48.0830016,
+    "lon": 4.0983976,
+    "addr": "Crogny, 10210 Les Loges-Margueron, France"
+  },
+  "lycee-agricole-charles-baltet-st-pouange": {
+    "lat": 48.2270476,
+    "lon": 4.0424319,
+    "addr": "Route de Villy-le-Maréchal, 10120 Saint-Pouange, France"
+  },
+  "lycee-agricole-sainte-maure": {
+    "lat": 48.3342845,
+    "lon": 4.0781524,
+    "addr": "1 Route de Méry, 10150 Sainte-Maure, France"
+  },
+  "lycee-prive-cordeliers-arcis": {
+    "lat": 48.5349641,
+    "lon": 4.1403875,
+    "addr": "6 Rue des Cordeliers, 10700 Arcis-sur-Aube, France"
+  }
+}

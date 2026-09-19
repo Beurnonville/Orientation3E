@@ -1800,10 +1800,763 @@ body {
 .lycee-aube-details {
   font-size: 0.8rem;
   color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.lycee-aube-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  padding: 0.35rem 0.6rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: #475569;
+  margin-top: 0.3rem;
+}
+
+.lycee-aube-stats .stat-cap strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.lycee-aube-stats .stat-dem {
+  color: #334155;
+}
+
+.lycee-aube-stats .stat-blue {
+  color: #0284c7;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {
   .familles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   MODULE : CARTE INTERACTIVE DES ÉTABLISSEMENTS (BAC PRO & CAP)
+   ========================================================================== */
+.map-section {
+  padding: 3.5rem 0;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.825rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--gt-primary-light);
+  color: var(--gt-primary-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.map-header-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.map-tabs {
+  display: flex;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem;
+  border-radius: var(--radius-full);
+  gap: 0.35rem;
+  box-shadow: var(--shadow-sm);
+  max-width: 650px;
+  width: 100%;
+}
+
+.map-tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-tab-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.map-tab-btn.active {
+  background: #ffffff;
+  color: var(--gt-primary-dark);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.tab-count-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--gt-primary-subtle);
+  color: var(--gt-primary-dark);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.map-filter-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.map-filter-label {
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.map-tag-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-tag-btn:hover {
+  border-color: var(--gt-primary);
+  color: var(--gt-primary);
+}
+
+.map-tag-btn.active {
+  background: var(--gt-primary);
+  color: #ffffff;
+  border-color: var(--gt-primary);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Conteneur principal de la carte et du panneau */
+.map-interactive-wrapper {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.map-viewport-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.interactive-map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #f1f5f9;
+}
+
+/* Légende flottante */
+.map-floating-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 500;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  pointer-events: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.pin-dot.public {
+  background: #10b981;
+}
+
+.pin-dot.prive {
+  background: #3b82f6;
+}
+
+/* Marqueurs SVG personnalisés Leaflet */
+.custom-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-map-pin {
+  position: relative;
+  width: 36px;
+  height: 44px;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.pin-icon-wrap {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.35);
+  border: 2.5px solid #ffffff;
+}
+
+.pin-public .pin-icon-wrap {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+}
+
+.pin-prive .pin-icon-wrap {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.pin-number {
+  transform: rotate(45deg);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1;
+}
+
+.pin-pulse {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.25);
+  filter: blur(1px);
+}
+
+.custom-map-pin:hover,
+.custom-map-pin.pin-hovered {
+  transform: translateY(-6px) scale(1.14);
+  z-index: 1000 !important;
+}
+
+.custom-map-pin.pin-selected {
+  transform: translateY(-8px) scale(1.22);
+  z-index: 1001 !important;
+}
+
+.custom-map-pin.pin-selected .pin-icon-wrap {
+  box-shadow: 0 0 0 4px #f59e0b, 0 8px 20px rgba(245, 158, 11, 0.5);
+  border-color: #ffffff;
+}
+
+/* Infobulle Leaflet */
+.map-tooltip-content {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: var(--text-primary);
+  padding: 0.1rem;
+}
+
+/* Fiche détaillée de l'établissement (panneau latéral flottant style Google Maps) */
+.map-school-sheet {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  bottom: 14px;
+  width: 440px;
+  max-width: calc(100% - 28px);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+  z-index: 500;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sheet-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.sheet-placeholder h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sheet-placeholder p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.sheet-content {
+  padding: 1.25rem;
+}
+
+.sheet-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sheet-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sheet-number-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sheet-number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.sheet-badges {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.sheet-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.sheet-close-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.sheet-school-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.sheet-address {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.sheet-short-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  background: var(--bg-subtle);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.85rem;
+}
+
+.sheet-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.summary-pill {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.5rem;
+  text-align: center;
+}
+
+.summary-pill .pill-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.summary-pill .pill-value {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.summary-pill .pill-value.blue {
+  color: var(--gt-primary);
+}
+
+/* Blocs de formations dans la fiche */
+.sheet-formations-block {
+  margin-bottom: 1.5rem;
+}
+
+.block-title {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.block-title .count-badge {
+  font-size: 0.7rem;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.sheet-formations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sheet-formation-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.formation-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.diplome-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
+}
+
+.diplome-badge.bac {
+  background: var(--pro-primary-subtle);
+  color: var(--pro-primary-dark);
+  border: 1px solid var(--pro-border);
+}
+
+.diplome-badge.cap {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.formation-card-title {
+  font-size: 0.925rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.formation-card-specs {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.specs-label {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.formation-card-specs ul {
+  margin: 0.2rem 0 0 0;
+  padding-left: 1rem;
+}
+
+.formation-card-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  background: var(--bg-subtle);
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+}
+
+.f-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.f-stat-val strong {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.f-stat-val.blue {
+  color: var(--gt-primary-dark);
+}
+
+.f-stat-val.blue strong {
+  color: var(--gt-primary);
+}
+
+.f-stat-val.tension-high {
+  color: #dc2626;
+  font-weight: 800;
+}
+
+.f-stat-val.tension-med {
+  color: #d97706;
+  font-weight: 800;
+}
+
+.f-stat-val.tension-low {
+  color: #16a34a;
+  font-weight: 800;
+}
+
+.formation-card-remarque {
+  margin-top: 0.45rem;
+  font-size: 0.75rem;
+  color: #b45309;
+  background: #fffbeb;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid #fef3c7;
+}
+
+/* Raccourcis rapides sous la carte */
+.map-school-quicklist {
+  margin-top: 1.5rem;
+}
+
+.quicklist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.quicklist-header h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.quicklist-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.quicklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.map-quick-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+}
+
+.map-quick-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gt-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-quick-card.active {
+  background: #f0f9ff;
+  border-color: var(--gt-primary);
+  box-shadow: 0 0 0 2px var(--gt-primary-light);
+}
+
+.quick-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.quick-card-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.map-quick-card.active .quick-card-num {
+  background: var(--gt-primary);
+}
+
+.quick-card-name {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.quick-card-sub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .map-interactive-wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interactive-map {
+    height: 440px;
+  }
+
+  .map-school-sheet {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    max-height: 480px;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-tabs {
+    flex-direction: column;
+    border-radius: var(--radius-md);
+  }
+
+  .map-tab-btn {
+    border-radius: var(--radius-sm);
+  }
+
+  .interactive-map {
+    height: 380px;
+  }
+
+  .quicklist-grid {
     grid-template-columns: 1fr;
   }
 }
