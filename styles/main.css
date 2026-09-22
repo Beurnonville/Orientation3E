@@ -236,6 +236,65 @@ body {
   line-height: 1.6;
 }
 
+/* Avertissement déontologique dans le Hero */
+.hero-disclaimer {
+  max-width: 880px;
+  margin: 0 auto 2.25rem;
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.35rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
+}
+
+.hero-disclaimer-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: #fef3c7;
+  color: #b45309;
+  margin-top: 2px;
+}
+
+.hero-disclaimer-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.hero-disclaimer-content {
+  flex: 1;
+}
+
+.hero-disclaimer-title {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #92400e;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-disclaimer-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #78350f;
+  margin: 0;
+}
+
+.hero-disclaimer-text strong {
+  color: #451a03;
+  font-weight: 700;
+}
+
 /* 3 Cartouches d'introduction rapide */
 .hero-piliers {
   display: grid;
@@ -1513,6 +1572,35 @@ body {
   color: white;
 }
 
+.footer-disclaimer {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-left: 4px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.footer-disclaimer-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.footer-disclaimer-content {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+.footer-disclaimer-content strong {
+  color: #f8fafc;
+}
+
 .footer-bottom {
   border-top: 1px solid #334155;
   padding-top: 1.5rem;
@@ -1565,6 +1653,26 @@ body {
 
   .result-scores {
     grid-template-columns: 1fr;
+  }
+
+  .hero-disclaimer {
+    padding: 0.9rem 1rem;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-disclaimer-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-disclaimer-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-disclaimer-text {
+    font-size: 0.85rem;
   }
 }
 
@@ -2598,5 +2706,33 @@ body {
 
   .comparator-section {
     page-break-before: always;
+  }
+
+  .hero-disclaimer {
+    background: #ffffff !important;
+    border: 1px solid #64748b !important;
+    border-left: 4px solid #0f172a !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    padding: 0.75rem 1rem !important;
+    margin: 1rem 0 1.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  .hero-disclaimer-title {
+    color: #000000 !important;
+  }
+
+  .hero-disclaimer-text {
+    color: #1e293b !important;
+    font-size: 0.85rem !important;
+  }
+
+  .hero-disclaimer-text strong {
+    color: #000000 !important;
+  }
+
+  .hero-disclaimer-icon {
+    display: none !important;
   }
 }
