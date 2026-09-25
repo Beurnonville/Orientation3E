@@ -33,7 +33,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Métiers de la couture et de la confection",
           "specialites": [
-            "Bac Pro Métiers de la couture et de la confection"
+            {
+              "nom": "Bac Pro Métiers de la couture et de la confection",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-couture-et-de-la-confection"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 30,
@@ -48,7 +51,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-couture-et-de-la-confection"
         },
         {
           "id": "p1-herriot-hotellerie-restauration",
@@ -56,10 +60,16 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de l’hôtellerie et de la restauration",
-          "intitule": "2de Pro Métiers de l’hôtellerie et de la restauration",
+          "intitule": "Bacs Pros Cuisine & Commercialisation et services en restauration (CSR)",
           "specialites": [
-            "Bac Pro Cuisine",
-            "Bac Pro Commercialisation et services en restauration (CSR)"
+            {
+              "nom": "Bac Pro Cuisine",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-cuisine"
+            },
+            {
+              "nom": "Bac Pro Commercialisation et services en restauration (CSR)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-commercialisation-et-services-en-restauration"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 48,
@@ -74,7 +84,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-de-l-hotellerie-restauration"
         },
         {
           "id": "p2-herriot-hcr",
@@ -84,7 +95,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Commercialisation et services en hôtel-café-restaurant (HCR)",
           "specialites": [
-            "CAP Commercialisation et services en hôtel-café-restaurant"
+            {
+              "nom": "CAP Commercialisation et services en hôtel-café-restaurant",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-commercialisation-et-services-en-hotel-cafe-restaurant"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 36,
@@ -99,7 +113,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-commercialisation-et-services-en-hotel-cafe-restaurant"
         },
         {
           "id": "p2-herriot-cuisine",
@@ -109,7 +124,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Cuisine",
           "specialites": [
-            "CAP Cuisine"
+            {
+              "nom": "CAP Cuisine",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-cuisine"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 24,
@@ -124,7 +142,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-cuisine"
         },
         {
           "id": "p2-herriot-psr",
@@ -134,7 +153,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Production et service en restaurations (rapide, collective, cafétéria)",
           "specialites": [
-            "CAP Production et service en restaurations (rapide, collective, cafétéria)"
+            {
+              "nom": "CAP Production et service en restaurations (rapide, collective, cafétéria)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-production-et-service-en-restaurations-rapide-collective-cafeteria"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 12,
@@ -149,7 +171,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-production-et-service-en-restaurations-rapide-collective-cafeteria"
         },
         {
           "id": "p2-herriot-mode-flou",
@@ -159,7 +182,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Métiers de la mode - vêtement flou",
           "specialites": [
-            "CAP Métiers de la mode - vêtement flou"
+            {
+              "nom": "CAP Métiers de la mode - vêtement flou",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metiers-de-la-mode-vetement-flou"
+            }
           ],
           "etablissementId": "lpo-edouard-herriot-sainte-savine",
           "capacite": 15,
@@ -174,7 +200,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Savine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metiers-de-la-mode-vetement-flou"
         }
       ],
       "formationsCount": 6,
@@ -184,7 +211,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.028933,
       "adresse": "31 Rue Édouard Herriot, 10300 Sainte-Savine",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée des métiers de l'hôtellerie-restauration et de la mode"
+      "descriptionCourte": "Lycée des métiers de l'hôtellerie-restauration et de la mode",
+      "siteWeb": "https://lycee-edouard-herriot.com/"
     },
     {
       "id": "lpo-les-lombards-troyes",
@@ -201,9 +229,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de l’alimentation - bio-industries - laboratoire",
-          "intitule": "2de Pro Métiers de l’alimentation - bio-industries - laboratoire",
+          "intitule": "Bac Pro Production en industries pharmaceutiques, alimentaires et cosmétiques (PIPAC)",
           "specialites": [
-            "Bac Pro Production en industries pharmaceutiques, alimentaires et cosmétiques (PIPAC)"
+            {
+              "nom": "Bac Pro Production en industries pharmaceutiques, alimentaires et cosmétiques (PIPAC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-production-en-industries-pharmaceutiques-alimentaires-et-cosmetiques"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -218,7 +249,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-production-en-industries-pharmaceutiques-alimentaires-et-cosmetiques"
         },
         {
           "id": "p1-lombards-construction-durable",
@@ -226,9 +258,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la construction durable, du bâtiment et des travaux publics",
-          "intitule": "2de Pro Métiers de la construction durable, du bâtiment et des travaux publics",
+          "intitule": "Bac Pro Aménagement et finition du bâtiment (AFB)",
           "specialites": [
-            "Bac Pro Aménagement et finition du bâtiment (AFB)"
+            {
+              "nom": "Bac Pro Aménagement et finition du bâtiment (AFB)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-amenagement-et-finition-du-batiment"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -243,7 +278,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-amenagement-et-finition-du-batiment"
         },
         {
           "id": "p1-lombards-pilotage-maintenance",
@@ -251,9 +287,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers du pilotage et de la maintenance d’installations automatisées",
-          "intitule": "2de Pro Métiers du pilotage et de la maintenance d’installations automatisées",
+          "intitule": "Bac Pro Maintenance des systèmes de production connectés (MSPC)",
           "specialites": [
-            "Bac Pro Maintenance des systèmes de production connectés (MSPC)"
+            {
+              "nom": "Bac Pro Maintenance des systèmes de production connectés (MSPC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-systemes-de-production-connectes"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -268,7 +307,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-systemes-de-production-connectes"
         },
         {
           "id": "p1-lombards-agencement-menuiserie",
@@ -276,9 +316,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de l’agencement, de la menuiserie et de l’ameublement",
-          "intitule": "2de Pro Métiers de l’agencement, de la menuiserie et de l’ameublement",
+          "intitule": "Bac Pro Technicien menuisier agenceur (TMA)",
           "specialites": [
-            "Bac Pro Technicien menuisier agenceur (TMA)"
+            {
+              "nom": "Bac Pro Technicien menuisier agenceur (TMA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-menuisier-agenceur"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -293,7 +336,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-menuisier-agenceur"
         },
         {
           "id": "p1-lombards-etudes-modelisation",
@@ -301,9 +345,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des études et de la modélisation numérique du bâtiment",
-          "intitule": "2de Pro Métiers des études et de la modélisation numérique du bâtiment",
+          "intitule": "Bac Pro Technicien d'études du bâtiment (TEB - Option A : Études et économie)",
           "specialites": [
-            "Bac Pro Technicien d’études du bâtiment (TEB) - Option A : Études et économie"
+            {
+              "nom": "Bac Pro Technicien d'études du bâtiment (Option A : études et économie)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-d-etudes-du-batiment-option-a-etudes-et-economie"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -318,7 +365,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-d-etudes-du-batiment-option-a-etudes-et-economie"
         },
         {
           "id": "p1-lombards-transitions-num-energ",
@@ -326,12 +374,24 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des transitions numérique et énergétique (MTNE)",
-          "intitule": "2de Pro Métiers des transitions numérique et énergétique",
+          "intitule": "Bacs Pros Transitions numérique et énergétique (ICCER, MEE, MELEC, CIEL)",
           "specialites": [
-            "Bac Pro Installateur en chauffage, climatisation et énergies renouvelables (ICCER)",
-            "Bac Pro Maintenance et efficacité énergétique (MEE)",
-            "Bac Pro Métiers de l’électricité et de ses environnements connectés (MELEC)",
-            "Bac Pro Cybersécurité, informatique et réseaux, électronique (CIEL)"
+            {
+              "nom": "Bac Pro Cybersécurité, informatique et réseaux, électronique (CIEL)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-cybersecurite-informatique-et-reseaux-electronique"
+            },
+            {
+              "nom": "Bac Pro Métiers de l'électricité et de ses environnements connectés (MELEC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-electricite-et-de-ses-environnements-connectes"
+            },
+            {
+              "nom": "Bac Pro Installateur en chauffage, climatisation et énergies renouvelables (ICCER)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-installateur-en-chauffage-climatisation-et-energies-renouvelables"
+            },
+            {
+              "nom": "Bac Pro Maintenance et efficacité énergétique (MEE)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-et-efficacite-energetique2"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 84,
@@ -346,7 +406,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-des-transitions-numerique-et-energetique"
         },
         {
           "id": "p2-lombards-platre-isolation",
@@ -356,7 +417,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Métiers du plâtre et de l’isolation",
           "specialites": [
-            "CAP Métiers du plâtre et de l’isolation"
+            {
+              "nom": "CAP Métiers du plâtre et de l'isolation",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metiers-du-platre-et-de-l-isolation"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -371,7 +435,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metiers-du-platre-et-de-l-isolation"
         },
         {
           "id": "p2-lombards-peintre-applicateur",
@@ -381,7 +446,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Peintre applicateur de revêtements",
           "specialites": [
-            "CAP Peintre applicateur de revêtements"
+            {
+              "nom": "CAP Peintre applicateur de revêtements",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-peintre-applicateur-de-revetements"
+            }
           ],
           "etablissementId": "lpo-les-lombards-troyes",
           "capacite": 15,
@@ -396,7 +464,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-peintre-applicateur-de-revetements"
         }
       ],
       "formationsCount": 8,
@@ -406,7 +475,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.068305,
       "adresse": "14 Avenue des Lombards, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée polyvalent industriel, génie énergétique, BTP, bois et bio-industries"
+      "descriptionCourte": "Lycée polyvalent industriel, génie énergétique, BTP, bois et bio-industries",
+      "siteWeb": "https://lyc-les-lombards.monbureaunumerique.fr/"
     },
     {
       "id": "lp-gabriel-voisin-troyes",
@@ -423,9 +493,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la maintenance des matériels et des véhicules",
-          "intitule": "2de Pro Métiers de la maintenance des matériels et des véhicules",
+          "intitule": "Bac Pro Maintenance des véhicules (Option A : voitures particulières)",
           "specialites": [
-            "Bac Pro Maintenance des véhicules (Option A : voitures particulières)"
+            {
+              "nom": "Bac Pro Maintenance des véhicules (Option A : voitures particulières)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-vehicules-option-vehicules-legers"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 30,
@@ -440,7 +513,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-vehicules-option-vehicules-legers"
         },
         {
           "id": "p1-voisin-carrossier-peintre",
@@ -450,7 +524,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Carrossier peintre automobile",
           "specialites": [
-            "Bac Pro Carrossier peintre automobile"
+            {
+              "nom": "Bac Pro Carrossier peintre automobile",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-carrossier-peintre-automobile"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 20,
@@ -465,7 +542,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-carrossier-peintre-automobile"
         },
         {
           "id": "p1-voisin-relation-client",
@@ -473,10 +551,20 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bacs Pros Métiers du commerce et de la vente (Options A & B) & Métiers de l'accueil",
           "specialites": [
-            "Bac Pro Métiers de l’accueil",
-            "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial + Option B : prospection clientèle et valorisation de l'offre commerciale)"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
+            },
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option B : prospection clientèle et valorisation de l'offre commerciale)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-b-prospection-clientele-et-valorisation-de-l-offre-commerciale"
+            },
+            {
+              "nom": "Bac Pro Métiers de l'accueil",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-accueil"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 72,
@@ -491,7 +579,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-de-la-relation-client"
         },
         {
           "id": "p2-voisin-equipier-commerce",
@@ -501,7 +590,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Équipier polyvalent du commerce (EPC)",
           "specialites": [
-            "CAP Équipier polyvalent du commerce"
+            {
+              "nom": "CAP Équipier polyvalent du commerce",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 30,
@@ -516,7 +608,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
         },
         {
           "id": "p2-voisin-maintenance-vl",
@@ -526,7 +619,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Maintenance des véhicules : véhicules légers",
           "specialites": [
-            "CAP Maintenance des véhicules : véhicules légers"
+            {
+              "nom": "CAP Maintenance des véhicules : véhicules légers",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-maintenance-des-vehicules-option-vehicules-legers"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 10,
@@ -541,7 +637,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-maintenance-des-vehicules-option-vehicules-legers"
         },
         {
           "id": "p2-voisin-peintre-auto",
@@ -551,7 +648,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Peintre automobile",
           "specialites": [
-            "CAP Peintre automobile"
+            {
+              "nom": "CAP Peintre automobile",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-peintre-automobile"
+            }
           ],
           "etablissementId": "lp-gabriel-voisin-troyes",
           "capacite": 20,
@@ -566,7 +666,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-peintre-automobile"
         }
       ],
       "formationsCount": 6,
@@ -576,7 +677,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.072164,
       "adresse": "Chemin de l'Arquebuse / 1 Rue Marie Curie, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée des métiers de l'automobile, transport et relation client"
+      "descriptionCourte": "Lycée des métiers de l'automobile, transport et relation client",
+      "siteWeb": "https://lyc-voisin.monbureaunumerique.fr/"
     },
     {
       "id": "lpo-marie-de-champagne-troyes",
@@ -595,7 +697,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Accompagnement, soins et services à la personne (ASSP)",
           "specialites": [
-            "Bac Pro Accompagnement, soins et services à la personne (ASSP)"
+            {
+              "nom": "Bac Pro Accompagnement, soins et services à la personne (ASSP)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-accompagnement-soins-et-services-a-la-personne"
+            }
           ],
           "etablissementId": "lpo-marie-de-champagne-troyes",
           "capacite": 48,
@@ -610,7 +715,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-accompagnement-soins-et-services-a-la-personne"
         },
         {
           "id": "p1-marie-champagne-aepa",
@@ -620,7 +726,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Animation-enfance et personnes âgées (AEPA)",
           "specialites": [
-            "Bac Pro Animation-enfance et personnes âgées (AEPA)"
+            {
+              "nom": "Bac Pro Animation-enfance et personnes âgées (AEPA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-animation-enfance-et-personnes-agees"
+            }
           ],
           "etablissementId": "lpo-marie-de-champagne-troyes",
           "capacite": 20,
@@ -635,7 +744,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-animation-enfance-et-personnes-agees"
         },
         {
           "id": "p1-marie-champagne-relation-client",
@@ -643,9 +753,16 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bac Pro Métiers du Commerce et de la Vente (Options A et B)",
           "specialites": [
-            "Bac Pro Métiers du commerce et de la vente (Option A + Option B)"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
+            },
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option B : prospection clientèle et valorisation de l'offre commerciale)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-b-prospection-clientele-et-valorisation-de-l-offre-commerciale"
+            }
           ],
           "etablissementId": "lpo-marie-de-champagne-troyes",
           "capacite": 36,
@@ -660,7 +777,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-de-la-relation-client"
         },
         {
           "id": "p1-marie-champagne-gestion-admin",
@@ -668,9 +786,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la gestion administrative, du transport et de la logistique (GATL)",
-          "intitule": "2de Pro Métiers de la gestion administrative, du transport et de la logistique",
+          "intitule": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
           "specialites": [
-            "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)"
+            {
+              "nom": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
+            }
           ],
           "etablissementId": "lpo-marie-de-champagne-troyes",
           "capacite": 56,
@@ -685,7 +806,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
         },
         {
           "id": "p2-marie-champagne-aepe",
@@ -695,7 +817,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Accompagnant éducatif petite enfance (AEPE)",
           "specialites": [
-            "CAP Accompagnant éducatif petite enfance"
+            {
+              "nom": "CAP Accompagnant éducatif petite enfance",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-accompagnant-educatif-petite-enfance"
+            }
           ],
           "etablissementId": "lpo-marie-de-champagne-troyes",
           "capacite": 15,
@@ -710,7 +835,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-accompagnant-educatif-petite-enfance"
         }
       ],
       "formationsCount": 5,
@@ -720,7 +846,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.063259,
       "adresse": "30 Rue de la Reine Blanche, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée polyvalent santé-social, petite enfance, tertiaire et relation client"
+      "descriptionCourte": "Lycée polyvalent santé-social, petite enfance, tertiaire et relation client",
+      "siteWeb": "https://lyc-marie-de-champagne.monbureaunumerique.fr/"
     },
     {
       "id": "lp-denis-diderot-romilly",
@@ -737,9 +864,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bac Pro Métiers du commerce et de la vente",
           "specialites": [
-            "Bac Pro Métiers du commerce et de la vente"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 36,
@@ -754,7 +884,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
         },
         {
           "id": "p3-diderot-gestion-admin",
@@ -762,9 +893,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la gestion administrative, du transport et de la logistique (GATL)",
-          "intitule": "2de Pro Métiers de la gestion administrative, du transport et de la logistique",
+          "intitule": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
           "specialites": [
-            "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)"
+            {
+              "nom": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 36,
@@ -779,7 +913,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
         },
         {
           "id": "p3-diderot-pilotage-maintenance",
@@ -787,9 +922,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers du pilotage et de la maintenance d’installations automatisées",
-          "intitule": "2de Pro Métiers du pilotage et de la maintenance d’installations automatisées",
+          "intitule": "Bac Pro Maintenance des systèmes de production connectés (MSPC)",
           "specialites": [
-            "Bac Pro Maintenance des systèmes de production connectés (MSPC)"
+            {
+              "nom": "Bac Pro Maintenance des systèmes de production connectés (MSPC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-systemes-de-production-connectes"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 15,
@@ -804,7 +942,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-systemes-de-production-connectes"
         },
         {
           "id": "p3-diderot-securite",
@@ -814,7 +953,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Métiers de la sécurité",
           "specialites": [
-            "Bac Pro Métiers de la sécurité"
+            {
+              "nom": "Bac Pro Métiers de la sécurité",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-securite"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 18,
@@ -829,7 +971,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-securite"
         },
         {
           "id": "p4-diderot-ebeniste",
@@ -839,7 +982,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Ébéniste",
           "specialites": [
-            "CAP Ébéniste"
+            {
+              "nom": "CAP Ébéniste",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-ebeniste"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 24,
@@ -854,7 +1000,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-ebeniste"
         },
         {
           "id": "p4-diderot-equipier-commerce",
@@ -864,7 +1011,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Équipier polyvalent du commerce (EPC)",
           "specialites": [
-            "CAP Équipier polyvalent du commerce"
+            {
+              "nom": "CAP Équipier polyvalent du commerce",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 15,
@@ -879,7 +1029,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
         },
         {
           "id": "p4-diderot-metallier",
@@ -889,7 +1040,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Métallier",
           "specialites": [
-            "CAP Métallier"
+            {
+              "nom": "CAP Métallier",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metallier"
+            }
           ],
           "etablissementId": "lp-denis-diderot-romilly",
           "capacite": 15,
@@ -904,7 +1058,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Romilly-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-metallier"
         }
       ],
       "formationsCount": 7,
@@ -914,7 +1069,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 3.71658,
       "adresse": "Allée Montesquieu / 64 Rue Paul Cézanne, 10100 Romilly-sur-Seine",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée professionnel métiers de la sécurité, ébénisterie, métallerie, industrie et commerce"
+      "descriptionCourte": "Lycée professionnel métiers de la sécurité, ébénisterie, métallerie, industrie et commerce",
+      "siteWeb": "https://lpdiderot10.fr/"
     },
     {
       "id": "lp-val-more-bar-sur-seine",
@@ -933,7 +1089,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Conducteur transport routier marchandises (CTRM)",
           "specialites": [
-            "Bac Pro Conducteur transport routier marchandises (CTRM)"
+            {
+              "nom": "Bac Pro Conducteur transport routier marchandises (CTRM)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conducteur-routier-de-marchandises"
+            }
           ],
           "etablissementId": "lp-val-more-bar-sur-seine",
           "capacite": 24,
@@ -948,7 +1107,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conducteur-routier-de-marchandises"
         },
         {
           "id": "p3-val-more-maintenance-mat-veh",
@@ -956,10 +1116,16 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la maintenance des matériels et des véhicules",
-          "intitule": "2de Pro Métiers de la maintenance des matériels et des véhicules",
+          "intitule": "Bacs Pros Maintenance des matériels & Maintenance des véhicules",
           "specialites": [
-            "Bac Pro Maintenance des matériels (Option A : agricoles, Option B : construction et manutention, Option C : espaces verts)",
-            "Bac Pro Maintenance des véhicules (Option B : transport routier, Option C : motocycles)"
+            {
+              "nom": "Bac Pro Maintenance des matériels (Options Agricoles, Travaux publics, Espaces verts)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-materiels-option-a-materiels-agricoles"
+            },
+            {
+              "nom": "Bac Pro Maintenance des véhicules (Options Véhicules de transport routier & Motocycles)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-maintenance-des-vehicules-option-vehicules-de-transport-routier"
+            }
           ],
           "etablissementId": "lp-val-more-bar-sur-seine",
           "capacite": 72,
@@ -974,7 +1140,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-de-la-maintenance-des-materiels-et-des-vehicules"
         },
         {
           "id": "p4-val-more-op-service-livraison",
@@ -984,7 +1151,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Opérateur de service - relation client et livraison",
           "specialites": [
-            "CAP Opérateur de service - relation client et livraison"
+            {
+              "nom": "CAP Opérateur de service - relation client et livraison",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-operateur-operatrice-de-service-relation-client-et-livraison"
+            }
           ],
           "etablissementId": "lp-val-more-bar-sur-seine",
           "capacite": 14,
@@ -999,7 +1169,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Seine",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-operateur-operatrice-de-service-relation-client-et-livraison"
         }
       ],
       "formationsCount": 3,
@@ -1009,7 +1180,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.388118,
       "adresse": "Rue du Val Moré, 10110 Bar-sur-Seine",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée des métiers de la maintenance (agricole, TP, moto, PL) et transport routier (CTRM)"
+      "descriptionCourte": "Lycée des métiers de la maintenance (agricole, TP, moto, PL) et transport routier (CTRM)",
+      "siteWeb": "https://lyc-val-more.monbureaunumerique.fr/"
     },
     {
       "id": "lpo-gaston-bachelard-bar-sur-aube",
@@ -1026,9 +1198,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)",
           "specialites": [
-            "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
+            }
           ],
           "etablissementId": "lpo-gaston-bachelard-bar-sur-aube",
           "capacite": 18,
@@ -1043,7 +1218,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Aube",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
         },
         {
           "id": "p3-bachelard-transitions-num-energ",
@@ -1051,9 +1227,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des transitions numérique et énergétique (MTNE)",
-          "intitule": "2de Pro Métiers des transitions numérique et énergétique",
+          "intitule": "Bac Pro Métiers de l'électricité et de ses environnements connectés (MELEC)",
           "specialites": [
-            "Bac Pro Métiers de l’électricité et de ses environnements connectés (MELEC)"
+            {
+              "nom": "Bac Pro Métiers de l'électricité et de ses environnements connectés (MELEC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-electricite-et-de-ses-environnements-connectes"
+            }
           ],
           "etablissementId": "lpo-gaston-bachelard-bar-sur-aube",
           "capacite": 15,
@@ -1068,7 +1247,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Aube",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-electricite-et-de-ses-environnements-connectes"
         },
         {
           "id": "p4-bachelard-equipier-commerce",
@@ -1078,7 +1258,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Équipier polyvalent du commerce (EPC)",
           "specialites": [
-            "CAP Équipier polyvalent du commerce"
+            {
+              "nom": "CAP Équipier polyvalent du commerce",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
+            }
           ],
           "etablissementId": "lpo-gaston-bachelard-bar-sur-aube",
           "capacite": 15,
@@ -1093,7 +1276,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Bar-sur-Aube",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
         }
       ],
       "formationsCount": 3,
@@ -1103,7 +1287,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.705792,
       "adresse": "3 Rue Gaston Bachelard, 10200 Bar-sur-Aube",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée polyvalent électricité connectée (MELEC), commerce et vente"
+      "descriptionCourte": "Lycée polyvalent électricité connectée (MELEC), commerce et vente",
+      "siteWeb": "https://cite-bachelard.monbureaunumerique.fr/"
     },
     {
       "id": "lycee-forestier-crogny-chaource",
@@ -1120,9 +1305,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la nature – jardin – paysage – forêt",
-          "intitule": "2de Pro Métiers de la nature – jardin – paysage – forêt",
+          "intitule": "Bac Pro Forêt",
           "specialites": [
-            "Bac Pro Forêt"
+            {
+              "nom": "Bac Pro Forêt",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-foret"
+            }
           ],
           "etablissementId": "lycee-forestier-crogny-chaource",
           "capacite": 32,
@@ -1137,7 +1325,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Chaource (Les Loges-Margueron / Crogny)",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-foret"
         },
         {
           "id": "p4-crogny-capa-travaux-forestiers",
@@ -1147,7 +1336,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAPA Travaux forestiers",
           "specialites": [
-            "CAPA Travaux forestiers"
+            {
+              "nom": "CAPA Travaux forestiers",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/capa-travaux-forestiers"
+            }
           ],
           "etablissementId": "lycee-forestier-crogny-chaource",
           "capacite": 19,
@@ -1162,7 +1354,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Chaource (Les Loges-Margueron / Crogny)",
           "statut": "Public",
           "secteur": "public",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/capa-travaux-forestiers"
         }
       ],
       "formationsCount": 2,
@@ -1172,7 +1365,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.098398,
       "adresse": "Hameau de Crogny, 10210 Les Loges-Margueron (Chaource)",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée des métiers de la forêt, de la gestion sylvicole et des travaux forestiers"
+      "descriptionCourte": "Lycée des métiers de la forêt, de la gestion sylvicole et des travaux forestiers",
+      "siteWeb": "https://campusterresdelaube.fr/presentation-du-campus/lycee-de-crogny"
     },
     {
       "id": "lycee-agricole-charles-baltet-st-pouange",
@@ -1189,9 +1383,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des productions (Agricoles)",
-          "intitule": "2de Pro Métiers des productions",
+          "intitule": "Bac Pro Conduite et gestion de l'entreprise agricole (CGEA)",
           "specialites": [
-            "Bac Pro Conduite et gestion de l’entreprise agricole - CGEA (grandes cultures, polyculture élevage)"
+            {
+              "nom": "Bac Pro Conduite et gestion de l'entreprise agricole (CGEA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conduite-et-gestion-de-l-entreprise-agricole"
+            }
           ],
           "etablissementId": "lycee-agricole-charles-baltet-st-pouange",
           "capacite": 50,
@@ -1206,7 +1403,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Saint-Pouange",
           "statut": "Public agricole",
           "secteur": "public",
-          "zone": "Troyes et agglomération (Péri-urbain)"
+          "zone": "Troyes et agglomération (Péri-urbain)",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conduite-et-gestion-de-l-entreprise-agricole"
         },
         {
           "id": "p3-baltet-sapat",
@@ -1216,7 +1414,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)",
           "specialites": [
-            "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)"
+            {
+              "nom": "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-services-aux-personnes-et-animation-dans-les-territoires"
+            }
           ],
           "etablissementId": "lycee-agricole-charles-baltet-st-pouange",
           "capacite": 32,
@@ -1231,7 +1432,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Saint-Pouange",
           "statut": "Public agricole",
           "secteur": "public",
-          "zone": "Troyes et agglomération (Péri-urbain)"
+          "zone": "Troyes et agglomération (Péri-urbain)",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-services-aux-personnes-et-animation-dans-les-territoires"
         }
       ],
       "formationsCount": 2,
@@ -1241,7 +1443,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.049272,
       "adresse": "D 109 / Route de Villy-le-Maréchal, 10120 Saint-Pouange",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée public agricole : grandes cultures, élevage (CGEA) et services aux personnes (SAPAT)"
+      "descriptionCourte": "Lycée public agricole : grandes cultures, élevage (CGEA) et services aux personnes (SAPAT)",
+      "siteWeb": "https://campusterresdelaube.fr/presentation-du-campus/lycee-charles-baltet"
     },
     {
       "id": "lycee-agricole-sainte-maure",
@@ -1258,11 +1461,16 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des productions (Agricoles & Équines)",
-          "intitule": "2de Pro Métiers des productions",
+          "intitule": "Bacs Pros Agricoles : CGEA (Grandes cultures / Élevage) & CGEH (Entreprise hippique)",
           "specialites": [
-            "Bac Pro Conduite et gestion de l’entreprise agricole (CGEA) - Grandes cultures",
-            "Bac Pro Conduite et gestion de l’entreprise agricole (CGEA) - Polyculture élevage",
-            "Bac Pro Conduite et gestion de l’entreprise hippique (CGEH)"
+            {
+              "nom": "Bac Pro Conduite et gestion de l'entreprise agricole (CGEA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conduite-et-gestion-de-l-entreprise-agricole"
+            },
+            {
+              "nom": "Bac Pro Conduite et gestion de l'entreprise hippique (CGEH)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-conduite-et-gestion-de-l-entreprise-hippique"
+            }
           ],
           "etablissementId": "lycee-agricole-sainte-maure",
           "capacite": 50,
@@ -1277,7 +1485,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Maure",
           "statut": "Privé agricole sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération (Péri-urbain)"
+          "zone": "Troyes et agglomération (Péri-urbain)",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-productions"
         },
         {
           "id": "p5-sainte-maure-nature-faune",
@@ -1285,9 +1494,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la nature - jardin - paysage - forêt",
-          "intitule": "2de Pro Métiers de la nature - jardin - paysage - forêt",
+          "intitule": "Bac Pro Gestion des milieux naturels et de la faune (GMNF)",
           "specialites": [
-            "Bac Pro Gestion des milieux naturels et de la faune (GMNF)"
+            {
+              "nom": "Bac Pro Gestion des milieux naturels et de la faune (GMNF)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-gestion-des-milieux-naturels-et-de-la-faune"
+            }
           ],
           "etablissementId": "lycee-agricole-sainte-maure",
           "capacite": 28,
@@ -1302,7 +1514,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Sainte-Maure",
           "statut": "Privé agricole sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération (Péri-urbain)"
+          "zone": "Troyes et agglomération (Péri-urbain)",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-gestion-des-milieux-naturels-et-de-la-faune"
         }
       ],
       "formationsCount": 2,
@@ -1312,7 +1525,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.078152,
       "adresse": "1 Route de Méry, 10150 Sainte-Maure",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée agricole privé : grandes cultures, polyculture-élevage, filière équine et nature/faune"
+      "descriptionCourte": "Lycée agricole privé : grandes cultures, polyculture-élevage, filière équine et nature/faune",
+      "siteWeb": "https://www.lyceesaintemaure.fr/"
     },
     {
       "id": "lycee-prive-cordeliers-arcis",
@@ -1331,7 +1545,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)",
           "specialites": [
-            "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)"
+            {
+              "nom": "Bac Pro Services aux personnes et animation dans les territoires (SAPAT)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-services-aux-personnes-et-animation-dans-les-territoires"
+            }
           ],
           "etablissementId": "lycee-prive-cordeliers-arcis",
           "capacite": 24,
@@ -1346,7 +1563,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Arcis-sur-Aube",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-services-aux-personnes-et-animation-dans-les-territoires"
         },
         {
           "id": "p5-cordeliers-conseil-vente",
@@ -1354,9 +1572,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers du conseil-vente (Alimentation)",
-          "intitule": "2de Pro Métiers du conseil-vente",
+          "intitule": "Bac Pro Technicien conseil-vente en alimentation",
           "specialites": [
-            "Bac Pro Technicien conseil-vente en alimentation (Option produits alimentaires et boissons)"
+            {
+              "nom": "Bac Pro Technicien conseil-vente en alimentation (produits alimentaires et boissons)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-conseil-vente-en-alimentation-produits-alimentaires-et-boissons"
+            }
           ],
           "etablissementId": "lycee-prive-cordeliers-arcis",
           "capacite": 24,
@@ -1371,7 +1592,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Arcis-sur-Aube",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-conseil-vente-en-alimentation-produits-alimentaires-et-boissons"
         },
         {
           "id": "p5-cordeliers-capa-sapver",
@@ -1381,7 +1603,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAPA Services aux personnes et vente en espace rural (SAPVER)",
           "specialites": [
-            "CAPA Services aux personnes et vente en espace rural"
+            {
+              "nom": "CAPA Services aux personnes et vente en espace rural",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/capa-services-aux-personnes-et-vente-en-espace-rural"
+            }
           ],
           "etablissementId": "lycee-prive-cordeliers-arcis",
           "capacite": 24,
@@ -1396,7 +1621,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Arcis-sur-Aube",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Hors Troyes et agglomération"
+          "zone": "Hors Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/capa-services-aux-personnes-et-vente-en-espace-rural"
         }
       ],
       "formationsCount": 3,
@@ -1406,7 +1632,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.140388,
       "adresse": "6 Rue des Cordeliers, 10700 Arcis-sur-Aube",
       "zoneCarte": "Aube",
-      "descriptionCourte": "Lycée privé rural : services aux personnes (SAPAT/SAPVER) et conseil-vente alimentation"
+      "descriptionCourte": "Lycée privé rural : services aux personnes (SAPAT/SAPVER) et conseil-vente alimentation",
+      "siteWeb": "https://lescordeliers.fr/"
     },
     {
       "id": "lp-la-salle-troyes",
@@ -1425,7 +1652,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Artisanat et métiers d’art, option communication visuelle plurimédia",
           "specialites": [
-            "Bac Pro Artisanat et métiers d’art, communication visuelle plurimédia"
+            {
+              "nom": "Bac Pro Artisanat et métiers d'art (option communication visuelle plurimédia)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-artisanat-et-metiers-d-art-option-communication-visuelle-plurimedia"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1440,7 +1670,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-artisanat-et-metiers-d-art-option-communication-visuelle-plurimedia"
         },
         {
           "id": "p6-la-salle-agora",
@@ -1448,9 +1679,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la gestion administrative, du transport et de la logistique (GATL)",
-          "intitule": "2de Pro Métiers de la gestion administrative, du transport et de la logistique",
+          "intitule": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
           "specialites": [
-            "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)"
+            {
+              "nom": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 18,
@@ -1465,7 +1699,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
         },
         {
           "id": "p6-la-salle-beaute-bien-etre",
@@ -1473,9 +1708,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la beauté et du bien-être",
-          "intitule": "2de Pro Métiers de la beauté et du bien-être",
+          "intitule": "Bac Pro Esthétique cosmétique parfumerie",
           "specialites": [
-            "Bac Pro Esthétique cosmétique parfumerie"
+            {
+              "nom": "Bac Pro Esthétique cosmétique parfumerie",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-esthetique-cosmetique-parfumerie"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1490,7 +1728,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-esthetique-cosmetique-parfumerie"
         },
         {
           "id": "p6-la-salle-agencement",
@@ -1498,9 +1737,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de l’agencement, de la menuiserie et de l’ameublement",
-          "intitule": "2de Pro Métiers de l’agencement, de la menuiserie et de l’ameublement",
+          "intitule": "Bac Pro Études et réalisation d'agencement (ERA)",
           "specialites": [
-            "Bac Pro Études et réalisation d’agencement (ERA)"
+            {
+              "nom": "Bac Pro Étude et réalisation d'agencement (ERA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-etude-et-realisation-d-agencement"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1515,7 +1757,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-etude-et-realisation-d-agencement"
         },
         {
           "id": "p6-la-salle-relation-client",
@@ -1523,9 +1766,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bac Pro Métiers du commerce et de la vente (Option B : prospection clientèle et valorisation de l'offre commerciale)",
           "specialites": [
-            "Bac Pro Métiers du commerce et de la vente (Option B : prospection clientèle et valorisation de l'offre commerciale)"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option B : prospection clientèle et valorisation de l'offre commerciale)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-b-prospection-clientele-et-valorisation-de-l-offre-commerciale"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 24,
@@ -1540,7 +1786,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-b-prospection-clientele-et-valorisation-de-l-offre-commerciale"
         },
         {
           "id": "p6-la-salle-transitions-num-energ",
@@ -1548,11 +1795,20 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des transitions numérique et énergétique (MTNE)",
-          "intitule": "2de Pro Métiers des transitions numérique et énergétique",
+          "intitule": "Bacs Pros Transitions numérique et énergétique (CIEL, MELEC, MFER)",
           "specialites": [
-            "Bac Pro Cybersécurité, informatique et réseaux, électronique (CIEL)",
-            "Bac Pro Métiers de l’électricité et de ses environnements connectés (MELEC)",
-            "Bac Pro Métiers du froid et des énergies renouvelables (MFER)"
+            {
+              "nom": "Bac Pro Cybersécurité, informatique et réseaux, électronique (CIEL)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-cybersecurite-informatique-et-reseaux-electronique"
+            },
+            {
+              "nom": "Bac Pro Métiers de l'électricité et de ses environnements connectés (MELEC)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-electricite-et-de-ses-environnements-connectes"
+            },
+            {
+              "nom": "Bac Pro Métiers du froid et des énergies renouvelables (MFER)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-froid-et-des-energies-renouvelables2"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 60,
@@ -1567,7 +1823,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-des-transitions-numerique-et-energetique"
         },
         {
           "id": "p6-la-salle-modelisation-batiment",
@@ -1575,9 +1832,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers des études et de la modélisation numérique du bâtiment",
-          "intitule": "2de Pro Métiers des études et de la modélisation numérique du bâtiment",
+          "intitule": "Bac Pro Technicien d'études du bâtiment (Option B : Assistant en architecture)",
           "specialites": [
-            "Bac Pro Technicien d’études du bâtiment (Option B : Assistant en architecture)"
+            {
+              "nom": "Bac Pro Technicien d'études du bâtiment (Option B : assistant en architecture)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-d-etudes-du-batiment-option-b-assistant-en-architecture"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1592,7 +1852,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-technicien-d-etudes-du-batiment-option-b-assistant-en-architecture"
         },
         {
           "id": "p6-la-salle-cap-electricien",
@@ -1602,7 +1863,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Électricien",
           "specialites": [
-            "CAP Électricien"
+            {
+              "nom": "CAP Électricien",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-electricien"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1617,7 +1881,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-electricien"
         },
         {
           "id": "p6-la-salle-cap-thermique",
@@ -1627,7 +1892,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Monteur en installations thermiques",
           "specialites": [
-            "CAP Monteur installations thermiques"
+            {
+              "nom": "CAP Monteur en installations thermiques",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-monteur-en-installations-thermiques"
+            }
           ],
           "etablissementId": "lp-la-salle-troyes",
           "capacite": 15,
@@ -1642,7 +1910,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-monteur-en-installations-thermiques"
         }
       ],
       "formationsCount": 9,
@@ -1652,7 +1921,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.072789,
       "adresse": "11 Rue de la Trinité, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée professionnel privé numérique, architecture, communication visuelle et beauté"
+      "descriptionCourte": "Lycée professionnel privé numérique, architecture, communication visuelle et beauté",
+      "siteWeb": "https://lasalle-troyes.fr/"
     },
     {
       "id": "lp-jeanne-mance-troyes",
@@ -1671,7 +1941,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Accompagnement, soins et services à la personne (ASSP)",
           "specialites": [
-            "Bac Pro Accompagnement, soins et services à la personne (ASSP)"
+            {
+              "nom": "Bac Pro Accompagnement, soins et services à la personne (ASSP)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-accompagnement-soins-et-services-a-la-personne"
+            }
           ],
           "etablissementId": "lp-jeanne-mance-troyes",
           "capacite": 30,
@@ -1686,7 +1959,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-accompagnement-soins-et-services-a-la-personne"
         },
         {
           "id": "p6-mance-logistique",
@@ -1694,9 +1968,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la gestion administrative, du transport et de la logistique (GATL)",
-          "intitule": "2de Pro Métiers de la gestion administrative, du transport et de la logistique",
+          "intitule": "Bac Pro Logistique",
           "specialites": [
-            "Bac Pro Logistique"
+            {
+              "nom": "Bac Pro Métiers de la logistique",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-logistique"
+            }
           ],
           "etablissementId": "lp-jeanne-mance-troyes",
           "capacite": 18,
@@ -1711,7 +1988,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-logistique"
         },
         {
           "id": "p6-mance-securite",
@@ -1721,7 +1999,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "Bac Pro Métiers de la sécurité",
           "specialites": [
-            "Bac Pro Métiers de la sécurité"
+            {
+              "nom": "Bac Pro Métiers de la sécurité",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-securite"
+            }
           ],
           "etablissementId": "lp-jeanne-mance-troyes",
           "capacite": 30,
@@ -1736,7 +2017,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-la-securite"
         },
         {
           "id": "p6-mance-cap-grand-age",
@@ -1746,7 +2028,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Agent accompagnant au grand âge (2AGA)",
           "specialites": [
-            "CAP Agent accompagnement au grand âge"
+            {
+              "nom": "CAP Agent accompagnant au grand âge",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-agent-accompagnant-au-grand-age"
+            }
           ],
           "etablissementId": "lp-jeanne-mance-troyes",
           "capacite": 30,
@@ -1761,7 +2046,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-agent-accompagnant-au-grand-age"
         },
         {
           "id": "p6-mance-cap-operateur-logistique",
@@ -1771,7 +2057,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Opérateur/opératrice logistique",
           "specialites": [
-            "CAP Opérateur/opératrice logistique"
+            {
+              "nom": "CAP Opérateur/opératrice logistique",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-operateur-operatrice-logistique"
+            }
           ],
           "etablissementId": "lp-jeanne-mance-troyes",
           "capacite": 12,
@@ -1786,7 +2075,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-operateur-operatrice-logistique"
         }
       ],
       "formationsCount": 5,
@@ -1796,7 +2086,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.066152,
       "adresse": "Impasse Saint-Martin / 42 Rue Jeanne Mance, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée professionnel privé métiers de la sécurité, grand âge, santé-social et logistique"
+      "descriptionCourte": "Lycée professionnel privé métiers de la sécurité, grand âge, santé-social et logistique",
+      "siteWeb": "https://lycee-jeanne-mance.fr/"
     },
     {
       "id": "lp-leonie-aviat-troyes",
@@ -1813,9 +2104,12 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la gestion administrative, du transport et de la logistique (GATL)",
-          "intitule": "2de Pro Métiers de la gestion administrative, du transport et de la logistique",
+          "intitule": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
           "specialites": [
-            "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)"
+            {
+              "nom": "Bac Pro Assistance à la gestion des organisations et de leurs activités (AGOrA)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
+            }
           ],
           "etablissementId": "lp-leonie-aviat-troyes",
           "capacite": 18,
@@ -1830,7 +2124,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-assistance-a-la-gestion-des-organisations-et-de-leurs-activites"
         },
         {
           "id": "p6-aviat-relation-client",
@@ -1838,10 +2133,16 @@ const FORMATIONS_AUBE_DATA = {
           "typeDiplome": "Bac Pro",
           "voieEntree": "2de Pro Famille de métiers",
           "familleMetiers": "Métiers de la relation client (MRC)",
-          "intitule": "2de Pro Métiers de la relation client",
+          "intitule": "Bacs Pros Métiers du commerce et de la vente (Option A) & Métiers de l'accueil",
           "specialites": [
-            "Bac Pro Métiers de l’accueil",
-            "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)"
+            {
+              "nom": "Bac Pro Métiers du commerce et de la vente (Option A : animation et gestion de l'espace commercial)",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-du-commerce-et-de-la-vente-option-a-animation-et-gestion-de-l-espace-commercial"
+            },
+            {
+              "nom": "Bac Pro Métiers de l'accueil",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-pro-metiers-de-l-accueil"
+            }
           ],
           "etablissementId": "lp-leonie-aviat-troyes",
           "capacite": 54,
@@ -1856,7 +2157,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/classe-de-2de-professionnelle-metiers-de-la-relation-client"
         },
         {
           "id": "p6-aviat-cap-equipier-commerce",
@@ -1866,7 +2168,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Équipier polyvalent du commerce (EPC)",
           "specialites": [
-            "CAP Équipier polyvalent du commerce"
+            {
+              "nom": "CAP Équipier polyvalent du commerce",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
+            }
           ],
           "etablissementId": "lp-leonie-aviat-troyes",
           "capacite": 15,
@@ -1881,7 +2186,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-equipier-polyvalent-du-commerce"
         },
         {
           "id": "p6-aviat-cap-fleuriste",
@@ -1891,7 +2197,10 @@ const FORMATIONS_AUBE_DATA = {
           "familleMetiers": null,
           "intitule": "CAP Fleuriste",
           "specialites": [
-            "CAP Fleuriste"
+            {
+              "nom": "CAP Fleuriste",
+              "url": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-fleuriste"
+            }
           ],
           "etablissementId": "lp-leonie-aviat-troyes",
           "capacite": 15,
@@ -1906,7 +2215,8 @@ const FORMATIONS_AUBE_DATA = {
           "commune": "Troyes",
           "statut": "Privé sous contrat",
           "secteur": "prive",
-          "zone": "Troyes et agglomération"
+          "zone": "Troyes et agglomération",
+          "onisepUrl": "https://www.onisep.fr/ressources/univers-formation/formations/lycees/cap-fleuriste"
         }
       ],
       "formationsCount": 4,
@@ -1916,7 +2226,8 @@ const FORMATIONS_AUBE_DATA = {
       "lon": 4.077871,
       "adresse": "11 Rue des Terrasses, 10000 Troyes",
       "zoneCarte": "Troyes",
-      "descriptionCourte": "Lycée professionnel privé tertiaire, accueil, commerce et fleuriste"
+      "descriptionCourte": "Lycée professionnel privé tertiaire, accueil, commerce et fleuriste",
+      "siteWeb": "https://www.lycee-aviat.com/"
     }
   ],
   "formations": [
@@ -3574,4 +3885,3 @@ if (typeof window !== 'undefined') {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = FORMATIONS_AUBE_DATA;
 }
-

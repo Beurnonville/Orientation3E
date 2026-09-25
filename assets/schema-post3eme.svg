@@ -76,8 +76,8 @@
     <text x="-78" y="115" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="800">POST-BAC</text>
     <text x="-78" y="205" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="800">DIPLÔMES</text>
     <text x="-78" y="335" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">TERMINALE</text>
-    <text x="-78" y="455" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1ère ANNÉE</text>
-    <text x="-78" y="575" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2nde / CAP 1</text>
+    <text x="-78" y="455" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan> ANNÉE</text>
+    <text x="-78" y="575" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2<tspan baseline-shift="super" font-size="70%">de</tspan> / CAP 1</text>
   </g>
 
   <!-- ========================================================================= -->
@@ -129,14 +129,14 @@
     <!-- 4. Premières -->
     <g class="interactive-node" data-element="premiere-tle-techno" transform="translate(50, 310)">
       <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0284c7" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan></text>
       <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">technologique</text>
       <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
       <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">8 séries possibles</text>
     </g>
     <g class="interactive-node" data-element="premiere-tle-generale" transform="translate(227, 310)">
       <rect width="168" height="100" rx="7" fill="url(#gradGtCard)" stroke="#0369a1" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="84" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan></text>
       <text x="84" y="52" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="12" font-weight="600">générale</text>
       <line x1="20" y1="65" x2="148" y2="65" stroke="#bae6fd" stroke-width="1"/>
       <text x="84" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">3 enseignements de spé</text>
@@ -145,13 +145,13 @@
     <!-- 5. Seconde STHR et 2de GT -->
     <g class="interactive-node" data-element="seconde-sthr" transform="translate(50, 420)">
       <rect width="80" height="95" rx="7" fill="#f8fafc" stroke="#0284c7" stroke-width="1.2" stroke-dasharray="3 2"/>
-      <text x="40" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">2nde</text>
+      <text x="40" y="35" text-anchor="middle" fill="#0369a1" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">2<tspan baseline-shift="super" font-size="70%">de</tspan></text>
       <text x="40" y="50" text-anchor="middle" fill="#0284c7" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">STHR</text>
       <text x="40" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="8.5">Hôtellerie</text>
     </g>
     <g class="interactive-node" data-element="seconde-gt" transform="translate(138, 420)">
       <rect width="257" height="95" rx="7" fill="url(#gradGtAccent)" filter="url(#cardShadow)"/>
-      <text x="128" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">2nde Générale &amp; Technologique</text>
+      <text x="128" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">2<tspan baseline-shift="super" font-size="70%">de</tspan> Générale &amp; Technologique</text>
       <text x="128" y="58" text-anchor="middle" fill="#f0f9ff" font-family="system-ui, sans-serif" font-size="11.5">Tronc commun + Options d'exploration</text>
       <text x="128" y="78" text-anchor="middle" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="10.5">Stage d'observation de 2 semaines en juin</text>
     </g>
@@ -204,7 +204,7 @@
       <text x="75" y="44" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="10.5">CS • BP • Insertion</text>
       <line x1="15" y1="55" x2="135" y2="55" stroke="#a7f3d0" stroke-width="1"/>
       <text x="75" y="73" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">ou Passerelle vers</text>
-      <text x="75" y="88" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1re Bac Pro (P1)</text>
+      <text x="75" y="88" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="10" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan> Bac Pro (P1)</text>
     </g>
     <!-- Terminale Pro -->
     <g class="interactive-node" data-element="premiere-tle-pro" transform="translate(590, 200)">
@@ -219,7 +219,7 @@
     <!-- 2e année CAP -->
     <g class="interactive-node" data-element="cap-scolaire" id="nodeCapAnnee2" transform="translate(430, 310)">
       <rect width="150" height="100" rx="7" fill="url(#gradProCard)" stroke="#059669" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="75" y="32" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">2e année</text>
+      <text x="75" y="32" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">2<tspan baseline-shift="super" font-size="70%">e</tspan> année</text>
       <text x="75" y="49" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="12" font-weight="600">de CAP</text>
       <line x1="15" y1="62" x2="135" y2="62" stroke="#a7f3d0" stroke-width="1"/>
       <text x="75" y="78" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Épreuves &amp; Diplôme</text>
@@ -228,7 +228,7 @@
     <!-- 1re Pro -->
     <g class="interactive-node" data-element="premiere-tle-pro" id="nodePremierePro" transform="translate(590, 310)">
       <rect width="185" height="100" rx="7" fill="url(#gradProCard)" stroke="#047857" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="92" y="35" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1ère</text>
+      <text x="92" y="35" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="13" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan></text>
       <text x="92" y="52" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="12" font-weight="600">professionnelle</text>
       <line x1="20" y1="65" x2="165" y2="65" stroke="#a7f3d0" stroke-width="1"/>
       <text x="92" y="82" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="10">Spécialité &amp; Chef-d'œuvre</text>
@@ -238,7 +238,7 @@
     <!-- 1re année CAP -->
     <g class="interactive-node" data-element="cap-scolaire" transform="translate(430, 420)">
       <rect width="150" height="95" rx="7" fill="#f0fdf4" stroke="#059669" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="75" y="30" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1ère année</text>
+      <text x="75" y="30" text-anchor="middle" fill="#047857" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan> année</text>
       <text x="75" y="47" text-anchor="middle" fill="#059669" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">de CAP</text>
       <line x1="15" y1="58" x2="135" y2="58" stroke="#a7f3d0" stroke-width="1"/>
       <text x="75" y="73" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Ateliers pratiques</text>
@@ -247,7 +247,7 @@
     <!-- 2de Pro -->
     <g class="interactive-node" data-element="seconde-pro" transform="translate(590, 420)">
       <rect width="185" height="95" rx="7" fill="url(#gradProAccent)" filter="url(#cardShadow)"/>
-      <text x="92" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14.5" font-weight="700">2nde Professionnelle</text>
+      <text x="92" y="35" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14.5" font-weight="700">2<tspan baseline-shift="super" font-size="70%">de</tspan> Professionnelle</text>
       <text x="92" y="54" text-anchor="middle" fill="#f0fdf4" font-family="system-ui, sans-serif" font-size="11">Par famille de métiers</text>
       <text x="92" y="74" text-anchor="middle" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10.5">6 semaines de stage (PFMP)</text>
     </g>
@@ -314,7 +314,7 @@
     <!-- 2e année CAP CFA -->
     <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 310)">
       <rect width="150" height="100" rx="7" fill="url(#gradAppCard)" stroke="#ea580c" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="75" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">2e année CAP</text>
+      <text x="75" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">2<tspan baseline-shift="super" font-size="70%">e</tspan> année CAP</text>
       <text x="75" y="47" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">en Alternance</text>
       <line x1="15" y1="60" x2="135" y2="60" stroke="#fed7aa" stroke-width="1"/>
       <text x="75" y="75" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Entreprise (70%)</text>
@@ -323,7 +323,7 @@
     <!-- 1re Pro CFA -->
     <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 310)">
       <rect width="185" height="100" rx="7" fill="url(#gradAppCard)" stroke="#c2410c" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="92" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1ère Pro</text>
+      <text x="92" y="30" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan> Pro</text>
       <text x="92" y="47" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">en Alternance</text>
       <line x1="20" y1="60" x2="165" y2="60" stroke="#fed7aa" stroke-width="1"/>
       <text x="92" y="75" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">CFA + Entreprise</text>
@@ -334,7 +334,7 @@
     <!-- 1re année CAP CFA -->
     <g class="interactive-node" data-element="apprentissage-cap" transform="translate(810, 420)">
       <rect width="150" height="95" rx="7" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2" filter="url(#cardShadow)"/>
-      <text x="75" y="28" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1ère année CAP</text>
+      <text x="75" y="28" text-anchor="middle" fill="#c2410c" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1<tspan baseline-shift="super" font-size="70%">re</tspan> année CAP</text>
       <text x="75" y="45" text-anchor="middle" fill="#ea580c" font-family="system-ui, sans-serif" font-size="10.5">en Alternance</text>
       <line x1="15" y1="56" x2="135" y2="56" stroke="#fed7aa" stroke-width="1"/>
       <text x="75" y="71" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Dès 15 ans révolus</text>
@@ -343,10 +343,10 @@
     <!-- 2de Pro CFA -->
     <g class="interactive-node" data-element="apprentissage-bac-pro" transform="translate(970, 420)">
       <rect width="185" height="95" rx="7" fill="url(#gradAppAccent)" filter="url(#cardShadow)"/>
-      <text x="92" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700">2nde Pro Apprentissage</text>
+      <text x="92" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13.5" font-weight="700">2<tspan baseline-shift="super" font-size="70%">de</tspan> Pro Apprentissage</text>
       <text x="92" y="50" text-anchor="middle" fill="#fff7ed" font-family="system-ui, sans-serif" font-size="11">Contrat de travail de 3 ans</text>
       <text x="92" y="70" text-anchor="middle" fill="#ffedd5" font-family="system-ui, sans-serif" font-size="10">Alternance CFA &amp; Entreprise</text>
-      <text x="92" y="85" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Salaire mensuel dès le 1er mois</text>
+      <text x="92" y="85" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Salaire mensuel dès le 1<tspan baseline-shift="super" font-size="70%">er</tspan> mois</text>
     </g>
 
     <!-- 6. Bannière Titre Apprentissage -->
@@ -362,7 +362,7 @@
   <!-- ========================================================================= -->
   <g class="socle-3eme" transform="translate(45, 620)">
     <rect width="1110" height="60" rx="10" fill="#334155" filter="url(#cardShadow)"/>
-    <text x="555" y="37" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="19" font-weight="800" letter-spacing="1">APRÈS LA CLASSE DE 3ème</text>
+    <text x="555" y="37" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="19" font-weight="800" letter-spacing="1">APRÈS LA CLASSE DE 3<tspan baseline-shift="super" font-size="70%">ème</tspan></text>
     
     <circle cx="225" cy="0" r="14" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
     <path d="M 225 6 L 225 -6 M 220 -1 L 225 -6 L 230 -1" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
@@ -414,15 +414,15 @@
     <text x="10" y="25" fill="#334155" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Passerelles d'orientation :</text>
     <rect x="180" y="14" width="22" height="15" rx="3" fill="#f59e0b"/>
     <text x="191" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P1</text>
-    <text x="208" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">CAP ➔ 1re Bac Pro</text>
+    <text x="208" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">CAP ➔ 1<tspan baseline-shift="super" font-size="70%">re</tspan> Bac Pro</text>
 
     <rect x="340" y="14" width="22" height="15" rx="3" fill="#f59e0b"/>
     <text x="351" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P2</text>
-    <text x="368" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2de Pro ➔ 1re Techno</text>
+    <text x="368" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2<tspan baseline-shift="super" font-size="70%">de</tspan> Pro ➔ 1<tspan baseline-shift="super" font-size="70%">re</tspan> Techno</text>
 
     <rect x="510" y="14" width="22" height="15" rx="3" fill="#0284c7"/>
     <text x="521" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P3</text>
-    <text x="538" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2de GT ➔ 1re Pro</text>
+    <text x="538" y="25" fill="#475569" font-family="system-ui, sans-serif" font-size="10.5">2<tspan baseline-shift="super" font-size="70%">de</tspan> GT ➔ 1<tspan baseline-shift="super" font-size="70%">re</tspan> Pro</text>
 
     <rect x="670" y="14" width="22" height="15" rx="3" fill="#ea580c"/>
     <text x="681" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800">P4</text>

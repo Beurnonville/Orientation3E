@@ -314,6 +314,8 @@ class InteractiveMapController {
     const bacsPros = etab.formations.filter(f => f.typeDiplome === "Bac Pro");
     const caps = etab.formations.filter(f => f.typeDiplome === "CAP" || f.typeDiplome === "CAPA");
 
+    const siteUrl = etab.siteWeb || (window.getLyceeSiteWeb ? window.getLyceeSiteWeb(etab.nom) : "");
+
     let html = `
       <div class="sheet-header">
         <div class="sheet-header-top">
@@ -322,25 +324,44 @@ class InteractiveMapController {
             <div class="sheet-badges">
               <span class="badge-statut ${isPublic ? 'public' : 'prive'}">${etab.statut}</span>
               <span class="badge-commune">📍 ${etab.commune}</span>
+              ${siteUrl ? `
+                <a href="${siteUrl}" target="_blank" rel="noopener noreferrer" class="badge-website-pill" title="Visiter le site officiel de l'établissement (nouvelle fenêtre)">
+                  🌐 Site web ↗
+                </a>
+              ` : ''}
             </div>
           </div>
           <button type="button" class="sheet-close-btn" onclick="window.mapController.closeSchoolSheet()" title="Fermer la fiche">&times;</button>
         </div>
-        <h3 class="sheet-school-name">${etab.nom}</h3>
+        <h3 class="sheet-school-name">
+          ${siteUrl ? `
+            <a href="${siteUrl}" target="_blank" rel="noopener noreferrer" class="sheet-school-name-link" title="Consulter le site officiel de ${etab.nom} (nouvelle fenêtre)">
+              ${etab.nom} <span class="ext-icon" aria-hidden="true">↗</span>
+            </a>
+          ` : etab.nom}
+        </h3>
         <div class="sheet-address">${etab.adresse || etab.commune}</div>
         <div class="sheet-short-desc">${etab.descriptionCourte || etab.type}</div>
 
         <div class="sheet-summary-stats">
-          <div class="summary-pill">
+          <div class="summary-pill prof-only">
             <span class="pill-label">Capacité totale</span>
             <span class="pill-value">${etab.capaciteTotale} places</span>
           </div>
-          <div class="summary-pill">
+          <div class="summary-pill prof-only">
             <span class="pill-label">Demandes 2025 (Vœu 1)</span>
             <span class="pill-value blue">${etab.demandes2025Totale}</span>
           </div>
+          <div class="summary-pill eleve-only">
+            <span class="pill-label">Statut</span>
+            <span class="pill-value">${etab.statut}</span>
+          </div>
+          <div class="summary-pill eleve-only">
+            <span class="pill-label">Secteur</span>
+            <span class="pill-value">📍 ${etab.commune}</span>
+          </div>
           <div class="summary-pill">
-            <span class="pill-label">Formations post-3e</span>
+            <span class="pill-label">Formations post-3<sup>e</sup></span>
             <span class="pill-value">${etab.formationsCount}</span>
           </div>
         </div>
@@ -394,24 +415,44 @@ class InteractiveMapController {
     }
 
     const hasSpecialites = f.specialites && f.specialites.length > 1;
+    const isOptionsOnly = hasSpecialites && f.specialites.every(s => (typeof s === "string" ? s : s.nom).toLowerCase().startsWith("option"));
+    const specsLabel = isOptionsOnly
+      ? "Options accessibles en 1<sup>re</sup> Pro :"
+      : "Spécialités accessibles en 1<sup>re</sup> Pro :";
+
+    const titleHtml = f.onisepUrl
+      ? `<a href="${f.onisepUrl}" target="_blank" rel="noopener noreferrer" class="formation-card-title-link" title="Consulter la fiche Onisep de cette formation (nouvelle fenêtre)">${f.intitule} <span class="ext-icon" aria-hidden="true">↗</span></a>`
+      : f.intitule;
 
     return `
       <div class="sheet-formation-card">
         <div class="formation-card-header">
           <span class="diplome-badge ${f.typeDiplome === 'Bac Pro' ? 'bac' : 'cap'}">${f.typeDiplome}</span>
-          <h5 class="formation-card-title">${f.intitule}</h5>
+          <h5 class="formation-card-title">${titleHtml}</h5>
         </div>
 
         ${hasSpecialites ? `
           <div class="formation-card-specs">
-            <span class="specs-label">Spécialités accessibles en 1ère Pro :</span>
-            <ul>
-              ${f.specialites.map(s => `<li>${s}</li>`).join("")}
+            <span class="specs-label">${specsLabel}</span>
+            <ul class="formation-specs-list">
+              ${f.specialites.map(s => {
+                const nom = typeof s === "string" ? s : s.nom;
+                const url = typeof s === "object" && s.url ? s.url : (f.onisepUrl || null);
+                return `
+                  <li>
+                    ${url ? `
+                      <a href="${url}" target="_blank" rel="noopener noreferrer" class="sheet-spec-link" title="Consulter la fiche Onisep de cette spécialité (nouvelle fenêtre)">
+                        ${nom} <span class="ext-icon" aria-hidden="true">↗</span>
+                      </a>
+                    ` : nom}
+                  </li>
+                `;
+              }).join("")}
             </ul>
           </div>
         ` : ''}
 
-        <div class="formation-card-stats-row">
+        <div class="formation-card-stats-row prof-only">
           <div class="f-stat-item">
             <span class="f-stat-label">Capacité d'accueil</span>
             <span class="f-stat-val"><strong>${f.capacite} places</strong></span>
@@ -430,11 +471,56 @@ class InteractiveMapController {
           ` : ''}
         </div>
 
-        ${f.remarques ? `
-          <div class="formation-card-remarque">
-            ℹ️ ${f.remarques}
+        ${this.renderFormationRemarque(f.remarques)}
+      </div>
+    `;
+  }
+
+  /**
+   * Rendu intelligent des remarques : masque les mentions de taux de pression en mode élève
+   */
+  renderFormationRemarque(remarques) {
+    if (!remarques) return "";
+
+    const trimmed = remarques.trim();
+
+    // 1. Remarques concernant exclusivement le taux de pression ou la demande / attractivité
+    const isPurePression = /^(taux de pression|forte demande|fili[eè]re tr[eè]s demand[eé]e|fili[eè]re tr[eè]s attractive|fili[eè]re s[eé]lective|tr[eè]s forte attractivit[eé])/i.test(trimmed);
+
+    if (isPurePression) {
+      return `
+        <div class="formation-card-remarque prof-only">
+          ℹ️ ${trimmed}
+        </div>
+      `;
+    }
+
+    // 2. Remarques mixtes avec consigne d'orientation et phrase de tension
+    if (/taux de pression/i.test(trimmed)) {
+      const parts = trimmed.split(/(Taux de pression[^.]*\.?)/i);
+      const textPedago = (parts[0] || "").trim();
+      const textPression = parts.slice(1).join("").trim();
+
+      if (!textPedago) {
+        return `
+          <div class="formation-card-remarque prof-only">
+            ℹ️ ${trimmed}
           </div>
-        ` : ''}
+        `;
+      }
+
+      return `
+        <div class="formation-card-remarque">
+          ℹ️ ${textPedago}
+          ${textPression ? `<span class="prof-only"> ${textPression}</span>` : ""}
+        </div>
+      `;
+    }
+
+    // 3. Remarque pédagogique standard (ex: passerelles, options)
+    return `
+      <div class="formation-card-remarque">
+        ℹ️ ${trimmed}
       </div>
     `;
   }
@@ -475,15 +561,23 @@ class InteractiveMapController {
     container.innerHTML = etablissements.map((etab, idx) => {
       const isSelected = etab.id === this.selectedEtabId;
       const isPublic = etab.secteur === "public";
+      const siteUrl = etab.siteWeb || (window.getLyceeSiteWeb ? window.getLyceeSiteWeb(etab.nom) : "");
 
       return `
         <div class="map-quick-card ${isSelected ? 'active' : ''}" id="quick-card-${etab.id}" onclick="window.mapController.selectEstablishment('${etab.id}')">
           <div class="quick-card-top">
-            <span class="quick-card-num">${idx + 1}</span>
-            <span class="badge-statut ${isPublic ? 'public' : 'prive'}">${etab.statut}</span>
+            <div style="display:inline-flex; align-items:center; gap:0.35rem;">
+              <span class="quick-card-num">${idx + 1}</span>
+              <span class="badge-statut ${isPublic ? 'public' : 'prive'}">${etab.statut}</span>
+            </div>
+            ${siteUrl ? `
+              <a href="${siteUrl}" target="_blank" rel="noopener noreferrer" class="quick-card-site-link" onclick="event.stopPropagation()" title="Consulter le site officiel de ${etab.nom} (nouvelle fenêtre)">
+                🌐 Site ↗
+              </a>
+            ` : ''}
           </div>
           <div class="quick-card-name">${etab.nom}</div>
-          <div class="quick-card-sub">📍 ${etab.commune} &bull; ${etab.capaciteTotale} places</div>
+          <div class="quick-card-sub">📍 ${etab.commune} <span class="prof-only">&bull; ${etab.capaciteTotale} places</span><span class="eleve-only">&bull; ${etab.formationsCount} formations</span></div>
         </div>
       `;
     }).join("");
